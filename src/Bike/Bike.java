@@ -5,7 +5,7 @@ package Bike;
 public class Bike {
 
     /** maximum limit of usage of a bike */
-    public static final int LIMIT_USAGE = 5;
+    public static final int LIMIT_OF_USAGE = 5;
 
     /** the Identifier of the bike */
     protected String Id;
