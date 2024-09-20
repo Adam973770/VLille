@@ -1,9 +1,9 @@
-# Projet COO-S5 Ramjattan-Kamtchoum
+# Projet : Velos Libre Service 
 
-# Nom du bînome :
+## Membres du Groupe 
 
-Adam RAMJATTAN
-Jean Bertrand KAMTCHOUM YONGA
+- Adam RAMJATTAN
+- Jean Bertrand KAMTCHOUM YONGA
 
 ## Getting started
 
