@@ -1,4 +1,4 @@
-package test.Bike;
+package test.BikeStation;
 /**
  * class for BikeStationTes
  */
