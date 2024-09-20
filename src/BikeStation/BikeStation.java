@@ -7,13 +7,13 @@ import Bike.Bike;
 public class BikeStation{
     
     /** the Id of the BikeStation*/
-    private String BikeStationId;
+    protected String BikeStationId;
     
     /** The Bikes in the BikeStation */
-    private List<Bike> theBikes;
+    protected List<Bike> theBikes;
 
     /** The number of Bikes in this BikeStation */
-    private int numberOfBikes = this.generateRandonCapacity();
+    protected int numberOfBikes = this.generateRandonCapacity();
 
     /**
      * Constructor of the BikeStation
