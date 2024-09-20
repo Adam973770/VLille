@@ -163,7 +163,7 @@
 											"top": 516,
 											"width": 210.6279296875,
 											"height": 13,
-											"text": "+cmpTimer: Int",
+											"text": "+cmpTimer: int",
 											"horizontalAlignment": 0
 										}
 									],
@@ -197,7 +197,7 @@
 											"top": 539,
 											"width": 210.6279296875,
 											"height": 13,
-											"text": "+BikeStation(Id: String, capacity: Int)",
+											"text": "+BikeStation(Id: String, capacity: int)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -214,7 +214,7 @@
 											"top": 554,
 											"width": 210.6279296875,
 											"height": 13,
-											"text": "+getCapacity(): Int",
+											"text": "+getCapacity(): int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -248,7 +248,7 @@
 											"top": 584,
 											"width": 210.6279296875,
 											"height": 13,
-											"text": "+getNumberOfBikes(): Int",
+											"text": "+getNumberOfBikes(): int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -265,7 +265,7 @@
 											"top": 599,
 											"width": 210.6279296875,
 											"height": 13,
-											"text": "+firstFreeSlot(): Int",
+											"text": "+firstFreeSlot(): int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -401,7 +401,7 @@
 											"font": "Arial;13;1",
 											"left": 829,
 											"top": 343,
-											"width": 306.0205078125,
+											"width": 332.0712890625,
 											"height": 13,
 											"text": "Bike"
 										},
@@ -436,7 +436,7 @@
 									"font": "Arial;13;0",
 									"left": 824,
 									"top": 336,
-									"width": 316.0205078125,
+									"width": 342.0712890625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGSDi0wG18h3gk="
@@ -473,9 +473,9 @@
 											"font": "Arial;13;0",
 											"left": 829,
 											"top": 366,
-											"width": 306.0205078125,
+											"width": 332.0712890625,
 											"height": 13,
-											"text": "#basket: Bool",
+											"text": "#basket: boolean",
 											"horizontalAlignment": 0
 										},
 										{
@@ -490,9 +490,9 @@
 											"font": "Arial;13;0",
 											"left": 829,
 											"top": 381,
-											"width": 306.0205078125,
+											"width": 332.0712890625,
 											"height": 13,
-											"text": "#luggageRack: Bool",
+											"text": "#luggageRack: boolean",
 											"horizontalAlignment": 0
 										},
 										{
@@ -507,7 +507,7 @@
 											"font": "Arial;13;0",
 											"left": 829,
 											"top": 396,
-											"width": 306.0205078125,
+											"width": 332.0712890625,
 											"height": 13,
 											"text": "#idBike: String",
 											"horizontalAlignment": 0
@@ -524,9 +524,9 @@
 											"font": "Arial;13;0",
 											"left": 829,
 											"top": 411,
-											"width": 306.0205078125,
+											"width": 332.0712890625,
 											"height": 13,
-											"text": "#nbUsage: Int",
+											"text": "#nbUsage: int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -541,16 +541,16 @@
 											"font": "Arial;13;0",
 											"left": 829,
 											"top": 426,
-											"width": 306.0205078125,
+											"width": 332.0712890625,
 											"height": 13,
-											"text": "+NBUSAGE: Static final Int",
+											"text": "+NB_USAGE: static final int",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 824,
 									"top": 361,
-									"width": 316.0205078125,
+									"width": 342.0712890625,
 									"height": 83
 								},
 								{
@@ -575,9 +575,9 @@
 											"font": "Arial;13;0",
 											"left": 829,
 											"top": 449,
-											"width": 306.0205078125,
+											"width": 332.0712890625,
 											"height": 13,
-											"text": "+Bike(id : String , basket : Bool , luggageRack : Bool)",
+											"text": "+Bike(id : String, basket: boolean, luggageRack: boolean)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -592,7 +592,7 @@
 											"font": "Arial;13;0",
 											"left": 829,
 											"top": 464,
-											"width": 306.0205078125,
+											"width": 332.0712890625,
 											"height": 13,
 											"text": "+getId(): String",
 											"horizontalAlignment": 0
@@ -609,9 +609,9 @@
 											"font": "Arial;13;0",
 											"left": 829,
 											"top": 479,
-											"width": 306.0205078125,
+											"width": 332.0712890625,
 											"height": 13,
-											"text": "+getBasket(): Bool",
+											"text": "+getBasket(): boolean",
 											"horizontalAlignment": 0
 										},
 										{
@@ -626,9 +626,9 @@
 											"font": "Arial;13;0",
 											"left": 829,
 											"top": 494,
-											"width": 306.0205078125,
+											"width": 332.0712890625,
 											"height": 13,
-											"text": "+getLuggageRack(): Bool",
+											"text": "+getLuggageRack(): boolean",
 											"horizontalAlignment": 0
 										},
 										{
@@ -643,16 +643,16 @@
 											"font": "Arial;13;0",
 											"left": 829,
 											"top": 509,
-											"width": 306.0205078125,
+											"width": 332.0712890625,
 											"height": 13,
-											"text": "+getNbUsage(): Int",
+											"text": "+getNbUsage(): int",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 824,
 									"top": 444,
-									"width": 316.0205078125,
+									"width": 342.0712890625,
 									"height": 83
 								},
 								{
@@ -692,7 +692,7 @@
 							"containerChangeable": true,
 							"left": 824,
 							"top": 336,
-							"width": 316.0205078125,
+							"width": 342.0712890625,
 							"height": 193,
 							"nameCompartment": {
 								"$ref": "AAAAAAGSDi0wG18g4lc="
@@ -751,7 +751,7 @@
 											"font": "Arial;13;1",
 											"left": 645,
 											"top": 711,
-											"width": 327.67236328125,
+											"width": 344.34765625,
 											"height": 13,
 											"text": "ClassicBike"
 										},
@@ -786,7 +786,7 @@
 									"font": "Arial;13;0",
 									"left": 640,
 									"top": 704,
-									"width": 337.67236328125,
+									"width": 354.34765625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGSDjzNtl+88fw="
@@ -813,7 +813,7 @@
 									"font": "Arial;13;0",
 									"left": 640,
 									"top": 729,
-									"width": 337.67236328125,
+									"width": 354.34765625,
 									"height": 10
 								},
 								{
@@ -838,16 +838,16 @@
 											"font": "Arial;13;0",
 											"left": 645,
 											"top": 744,
-											"width": 327.67236328125,
+											"width": 344.34765625,
 											"height": 13,
-											"text": "+ClassicBike(id : String, basket: Bool, luggage: Bool)",
+											"text": "+ClassicBike(id : String, basket: boolean, luggage: boolean)",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 640,
 									"top": 739,
-									"width": 337.67236328125,
+									"width": 354.34765625,
 									"height": 23
 								},
 								{
@@ -887,7 +887,7 @@
 							"containerChangeable": true,
 							"left": 640,
 							"top": 704,
-							"width": 337.67236328125,
+							"width": 354.34765625,
 							"height": 104,
 							"nameCompartment": {
 								"$ref": "AAAAAAGSDjzNtl+7RlA="
@@ -946,7 +946,7 @@
 											"font": "Arial;13;1",
 											"left": 1053,
 											"top": 719,
-											"width": 321.19775390625,
+											"width": 345.0712890625,
 											"height": 13,
 											"text": "ElectricBike"
 										},
@@ -981,7 +981,7 @@
 									"font": "Arial;13;0",
 									"left": 1048,
 									"top": 712,
-									"width": 331.19775390625,
+									"width": 355.0712890625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGSDjz1u1/mQYk="
@@ -1008,7 +1008,7 @@
 									"font": "Arial;13;0",
 									"left": 1048,
 									"top": 737,
-									"width": 331.19775390625,
+									"width": 355.0712890625,
 									"height": 10
 								},
 								{
@@ -1033,16 +1033,16 @@
 											"font": "Arial;13;0",
 											"left": 1053,
 											"top": 752,
-											"width": 321.19775390625,
+											"width": 345.0712890625,
 											"height": 13,
-											"text": "+ElectricBike(id : String, basket: Bool, luggage: Bool)",
+											"text": "+ElectricBike(id : String, basket: boolean, luggage: boolean)",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 1048,
 									"top": 747,
-									"width": 331.19775390625,
+									"width": 355.0712890625,
 									"height": 23
 								},
 								{
@@ -1082,7 +1082,7 @@
 							"containerChangeable": true,
 							"left": 1048,
 							"top": 712,
-							"width": 331.19775390625,
+							"width": 355.0712890625,
 							"height": 113,
 							"nameCompartment": {
 								"$ref": "AAAAAAGSDjz1u1/lch4="
@@ -1121,7 +1121,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 868,
+									"left": 879,
 									"top": 602,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -1142,7 +1142,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 855,
+									"left": 866,
 									"top": 595,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -1163,7 +1163,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 895,
+									"left": 906,
 									"top": 617,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -1184,7 +1184,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 835,
+									"left": 844,
 									"top": 667,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -1205,7 +1205,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 824,
+									"left": 833,
 									"top": 658,
 									"height": 13,
 									"alpha": 0.7853981633974483,
@@ -1226,8 +1226,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 857,
-									"top": 683,
+									"left": 866,
+									"top": 684,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -1247,7 +1247,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 903,
+									"left": 915,
 									"top": 538,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -1267,7 +1267,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 890,
+									"left": 902,
 									"top": 534,
 									"height": 13,
 									"alpha": -0.7853981633974483,
@@ -1287,7 +1287,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 929,
+									"left": 941,
 									"top": 547,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -1333,7 +1333,7 @@
 								"$ref": "AAAAAAGSDjzNtl+66yY="
 							},
 							"lineStyle": 1,
-							"points": "836:703;929:529",
+							"points": "845:703;941:529",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGSDkCW1WA7t7c="
@@ -1390,7 +1390,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1098,
+									"left": 1110,
 									"top": 622,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -1411,8 +1411,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 1086,
-									"top": 631,
+									"left": 1098,
+									"top": 630,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -1432,7 +1432,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1123,
+									"left": 1135,
 									"top": 605,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -1453,7 +1453,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1146,
+									"left": 1158,
 									"top": 692,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -1474,7 +1474,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1134,
+									"left": 1146,
 									"top": 697,
 									"height": 13,
 									"alpha": 0.7853981633974483,
@@ -1495,7 +1495,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1171,
+									"left": 1184,
 									"top": 680,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -1516,7 +1516,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1050,
+									"left": 1063,
 									"top": 552,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -1536,7 +1536,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1040,
+									"left": 1053,
 									"top": 562,
 									"height": 13,
 									"alpha": -0.7853981633974483,
@@ -1556,7 +1556,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1070,
+									"left": 1083,
 									"top": 533,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -1602,7 +1602,7 @@
 								"$ref": "AAAAAAGSDjz1u1/kF5g="
 							},
 							"lineStyle": 1,
-							"points": "1174:711;1048:529",
+							"points": "1186:711;1061:529",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGSDkDRTWCEHfY="
@@ -1835,7 +1835,7 @@
 											"top": 258,
 											"width": 302,
 											"height": 13,
-											"text": "+getTimer(): Int",
+											"text": "+getTimer(): int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1950,7 +1950,7 @@
 								"$ref": "AAAAAAGSDizH8V7xr0s="
 							},
 							"name": "cmpTimer",
-							"type": "Int"
+							"type": "int"
 						}
 					],
 					"operations": [
@@ -1978,7 +1978,7 @@
 										"$ref": "AAAAAAGSDjQj819n9mA="
 									},
 									"name": "capacity",
-									"type": "Int"
+									"type": "int"
 								}
 							]
 						},
@@ -1996,7 +1996,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGSDjTtCl9zzqM="
 									},
-									"type": "Int",
+									"type": "int",
 									"direction": "return"
 								}
 							]
@@ -2034,7 +2034,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGSDjfwWl+GhqE="
 									},
-									"type": "Int",
+									"type": "int",
 									"direction": "return"
 								}
 							]
@@ -2053,7 +2053,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGSDjkPk1+PUaM="
 									},
-									"type": "Int",
+									"type": "int",
 									"direction": "return"
 								}
 							]
@@ -2100,7 +2100,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGSDjx+o1+svnU="
 									},
-									"name": "Bike bike"
+									"name": "Bike bike",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -2131,7 +2132,7 @@
 							},
 							"name": "basket",
 							"visibility": "protected",
-							"type": "Bool"
+							"type": "boolean"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -2141,7 +2142,7 @@
 							},
 							"name": "luggageRack",
 							"visibility": "protected",
-							"type": "Bool"
+							"type": "boolean"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -2161,7 +2162,7 @@
 							},
 							"name": "nbUsage",
 							"visibility": "protected",
-							"type": "Int"
+							"type": "int"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -2169,8 +2170,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSDi0wG18dpzI="
 							},
-							"name": "NBUSAGE",
-							"type": "Static final Int"
+							"name": "NB_USAGE",
+							"type": "static final int"
 						}
 					],
 					"operations": [
@@ -2188,8 +2189,26 @@
 									"_parent": {
 										"$ref": "AAAAAAGSDkV3rGJRLHc="
 									},
-									"name": "id : String , basket : Bool , luggageRack : Bool",
-									"type": ""
+									"name": "id ",
+									"type": "String"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGSDyLv5uRWQtA=",
+									"_parent": {
+										"$ref": "AAAAAAGSDkV3rGJRLHc="
+									},
+									"name": "basket",
+									"type": "boolean"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGSDyLv5uRXV0U=",
+									"_parent": {
+										"$ref": "AAAAAAGSDkV3rGJRLHc="
+									},
+									"name": "luggageRack",
+									"type": "boolean"
 								}
 							]
 						},
@@ -2226,7 +2245,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGSDksWJWP7ups="
 									},
-									"type": "Bool",
+									"type": "boolean",
 									"direction": "return"
 								}
 							]
@@ -2245,7 +2264,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGSDktHpWRYXNE="
 									},
-									"type": "Bool",
+									"type": "boolean",
 									"direction": "return"
 								}
 							]
@@ -2264,7 +2283,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGSDm1iqmyUN9c="
 									},
-									"type": "Int",
+									"type": "int",
 									"direction": "return"
 								}
 							]
@@ -2346,7 +2365,7 @@
 										"$ref": "AAAAAAGSDmhUYmm+hJM="
 									},
 									"name": "basket",
-									"type": "Bool"
+									"type": "boolean"
 								},
 								{
 									"_type": "UMLParameter",
@@ -2355,7 +2374,7 @@
 										"$ref": "AAAAAAGSDmhUYmm+hJM="
 									},
 									"name": "luggage",
-									"type": "Bool"
+									"type": "boolean"
 								}
 							]
 						}
@@ -2423,7 +2442,7 @@
 										"$ref": "AAAAAAGSDmo5s2q5W3k="
 									},
 									"name": "basket",
-									"type": "Bool"
+									"type": "boolean"
 								},
 								{
 									"_type": "UMLParameter",
@@ -2432,7 +2451,7 @@
 										"$ref": "AAAAAAGSDmo5s2q5W3k="
 									},
 									"name": "luggage",
-									"type": "Bool"
+									"type": "boolean"
 								}
 							]
 						}
@@ -2520,7 +2539,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGSDlviZ2ZNUd8="
 									},
-									"type": "Int",
+									"type": "int",
 									"direction": "return"
 								}
 							]
