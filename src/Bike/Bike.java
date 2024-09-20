@@ -8,7 +8,7 @@ public class Bike {
     public static final int LIMIT_OF_USAGE = 5;
 
     /** the Identifier of the bike */
-    protected String Id;
+    protected String BikeId;
 
     /** amount of usage of the bike */
     protected int nbUsage;
@@ -18,7 +18,7 @@ public class Bike {
      * @param Id the identifier of the bike
      */
     public Bike(String Id){
-        this.Id = Id;
+        this.BikeId = Id;
         this.nbUsage = 0;
     }
 
@@ -26,8 +26,8 @@ public class Bike {
      * Get the identifier of the bike
      * @return the identifier of the bike
      */
-    public String getId(){
-        return this.Id;
+    public String getBikeId(){
+        return this.BikeId;
     }
     
     /**
@@ -60,7 +60,7 @@ public class Bike {
     public boolean equals(Object obj){
         if (obj instanceof Bike){
             Bike Other = (Bike) obj;
-            return this.getId().equals(Other.getId());
+            return this.getBikeId().equals(Other.getBikeId());
         }
         return false;
     }
@@ -70,6 +70,6 @@ public class Bike {
      * @return a description of the bike
      */
     public String toString(){
-        return "Bike : " + this.getId();
+        return "Bike : " + this.getBikeId();
     }
 }
