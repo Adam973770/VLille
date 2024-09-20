@@ -1,6 +1,9 @@
 # Projet COO-S5 Ramjattan-Kamtchoum
 
+# Nom du bînome :
 
+Adam RAMJATTAN
+Jean Bertrand KAMTCHOUM YONGA
 
 ## Getting started
 
