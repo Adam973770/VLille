@@ -12,13 +12,19 @@ public class BikeStation{
     /** The Bikes in the BikeStation */
     private List<Bike> theBikes;
 
+    /** The number of Bikes in this BikeStation */
+    private int numberOfBikes = this.generateRandonCapacity();
+
     /**
      * Constructor of the BikeStation
      * @param BikeStationId the Id of the BikeStation
      */
     public BikeStation (String BikeStationId){ 
        this.BikeStationId = BikeStationId;
-       this.theBikes = new ArrayList<Bike>(this.generateRandonCapacity());
+       this.theBikes = new ArrayList<Bike>(this.numberOfBikes);
+       for(int i = 0; i < this.numberOfBikes; i++) {
+            this.getTheBikes().add(new Bike("Bike" + i));
+       }
     }
     
     /**
