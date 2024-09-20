@@ -17,8 +17,8 @@ public class Bike {
      * Build a new Bike
      * @param Id the identifier of the bike
      */
-    public Bike(String Id){
-        this.BikeId = Id;
+    public Bike(String BikeId){
+        this.BikeId = BikeId;
         this.nbUsage = 0;
     }
 

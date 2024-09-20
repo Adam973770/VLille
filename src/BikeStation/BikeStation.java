@@ -1,70 +1,60 @@
 package BikeStation;
-import java.util.Random;
+import java.util.*;
 import Bike.Bike;
-
+/**
+ * class for a BikeStation
+ */
 public class BikeStation{
     
-    private Bike bikes [];
-    private int nbOfBikes;
-    private String bikeStationId;
-    private int cmpTimer; /*compte le nombre de fois qu'une sation est vide ou plein apres chaus e fin de timer*/
-    private static Random random = new Random();
+    /** the Id of the BikeStation*/
+    private String BikeStationId;
+    
+    /** The Bikes in the BikeStation */
+    private List<Bike> theBikes;
 
-    public BikeStation (String id) {
-        this.bikes = Bike [this.capacity];
-        this.bikeStationId =id;
-        this.capacity = generateCapacity();
-        this.cmpTimer = 0;
-        this.nbOfBikes = 0;
-
-        /*initialise toute les valeurs du tableau a null */
-        for (int i=0; i<this.capacity; i++){
-            this.bikes[i] = null;
-        }
+    /**
+     * Constructor of the BikeStation
+     * @param BikeStationId the Id of the BikeStation
+     */
+    public BikeStation (String BikeStationId){ 
+       this.BikeStationId = BikeStationId;
+       this.theBikes = new ArrayList<Bike>(this.generateRandonCapacity());
     }
-
-    /*Genere la capacité de la station aléatoirement entre 10 et 20*/
-    public int generateCapacity(){
-        return 10 + BikeStation.random.nextInt(10);
-    }
-
-    /*Renvoie la liste de tout les emplacements de la sation*/ 
-    public Bike[] getBikes(){
-        return this.bikes;
-    }
-
+    
+    /**
+     * Get the Id of the BikeStation
+     * @return the Id of the BikeStation
+     */
     public String getBikeStationId(){
-        return this.bikeStationId;
+        return this.BikeStationId;
     }
 
-    public int getCmpTimer(){
-        return this.cmpTimer;
+    /**
+     * Get all the Bikes of this BikeStation
+     * @return the Bikes of this BikeStation
+     */
+    public List<Bike> getTheBikes() {
+        return this.theBikes;
     }
 
-    public int getCapacity(){
-        return this.capacity;
+    /**
+     * Get the capacity of the BikeStation
+     * @return the capacity of the BikeStation
+     */
+    public int getCapacity() {
+        return this.getTheBikes().size();
     }
+ 
+    /**
+     * Generate a random number between 10 and 20 for the capacity of the BikeStation
+     * @return the capacity of the BikeStation
+     */
+    public int generateRandonCapacity() {
+        Random random = new Random();
+        int min = 10;
+        int max = 20;
 
-    /*renvoie le nombre de bike present dans la station */
-    public int getNbOfBike(){
-        return this.nbOfBikes;
-    }
-
-    /*Renvoie le numero du premiere emplacement vide */
-    public int firstFreeSlot(){
-        for (int i = 0; i<this.capacity; i++){
-            if (this.bikes[i] == null){
-                return i;
-            }
-            else {
-                return -1;
-                System.out.println("Il n'y a pas d'emplacement vide");
-            }
-        }
-    }
-
-    /*Permet de deposer un velo dans le premier emplacement vide de la station */
-    public void dropBike(Bike bike) {
-        
+        // Générer un entier aléatoire entre min et max (inclus)
+        return random.nextInt(max - min + 1) + min;
     }
 }
