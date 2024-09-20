@@ -1,31 +1,43 @@
-package bike;
-public class Bike{
+package Bike;
+/**
+ * class for a Bike 
+ */
+public class Bike {
 
-    public static final int NB_USAGE = 5;
+    /** maximum limit of usage of a bike */
+    public static final int LIMIT_USAGE = 5;
 
-    protected String idBike;
-    protected boolean basket;
-    protected boolean luggageRack;
+    /** the Identifier of the bike */
+    protected String Id;
+
+    /** amount of usage of the bike */
     protected int nbUsage;
 
-    public Bike(String idBike, boolean basket, boolean luggageRack){
-        this.idBike = idBike;
-        this.basket = basket;
-        this.luggageRack = luggageRack;
-        this.nbUsage = NB_USAGE;
+    /**
+     * Build a new Bike
+     * @param Id the identifier of the bike
+     */
+    public Bike(String Id){
+        this.Id = Id;
+        this.nbUsage = 0;
     }
 
+    /**
+     * Get the identifier of the bike
+     * @return the identifier of the bike
+     */
     public String getId(){
-        return this.idBike;
+        return this.Id;
     }
-    public boolean getBasket(){
-        return this.basket;
-    }
-    public boolean getLuggageRack(){
-        return this.luggageRack;
-    }
+    
+    /**
+     * Get the amount of usage of the bike
+     * @return the amount of usage of the bike
+     */
     public int getNbUsage(){
         return this.nbUsage;
     }
+
+
 
 }
