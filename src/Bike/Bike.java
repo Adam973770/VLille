@@ -38,4 +38,38 @@ public class Bike {
         return this.nbUsage;
     }
 
+    /**
+     * Increment the amount of usage of the bike
+     */
+    public void incrementNbUsage(){
+        this.nbUsage++;
+    }
+
+    /**
+     * Decrement the amount of usage of the bike
+     */
+    public void decrementNbUsage(){
+        this.nbUsage--;
+    }
+
+    /**
+     * Two bikes are equal if they have the same identifier
+     * @param obj the object to compare
+     * @return true if the objects are equal
+     */
+    public boolean equals(Object obj){
+        if (obj instanceof Bike){
+            Bike Other = (Bike) obj;
+            return this.getId().equals(Other.getId());
+        }
+        return false;
+    }
+
+    /**
+     * Get a description of the bike
+     * @return a description of the bike
+     */
+    public String toString(){
+        return "Bike : " + this.getId();
+    }
 }
