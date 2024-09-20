@@ -1,0 +1,13 @@
+#ignorer les jar executables
+*.jar
+
+#ignorer les dossiers test,lib
+lib/
+test/
+
+#ignorer le dossier .vscode ainsi que .json
+.vscode/
+*.json
+
+
+
