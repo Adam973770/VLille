@@ -38,6 +38,4 @@ public class Bike {
         return this.nbUsage;
     }
 
-
-
 }
