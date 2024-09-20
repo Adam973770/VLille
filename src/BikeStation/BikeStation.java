@@ -1,4 +1,4 @@
-package bikeStation;
+package BikeStation;
 import java.util.Random;
 import Bike.Bike;
 
