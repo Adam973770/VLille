@@ -1,17 +1,19 @@
 package Bike;
+import java.util.*;
+import util.*;
 /**
  * class for a Bike 
  */
 public class Bike {
-
-    /** maximum limit of usage of a bike */
-    public static final int LIMIT_OF_USAGE = 5;
 
     /** the Identifier of the bike */
     protected String BikeId;
 
     /** amount of usage of the bike */
     protected int nbUsage;
+
+    /** List of all the equipments of this bike */
+    protected List<Equipment> equipments;
 
     /**
      * Build a new Bike
@@ -20,6 +22,7 @@ public class Bike {
     public Bike(String BikeId){
         this.BikeId = BikeId;
         this.nbUsage = 0;
+        this.equipments = new ArrayList<Equipment>();
     }
 
     /**
