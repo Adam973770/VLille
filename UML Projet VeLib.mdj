@@ -129,7 +129,7 @@
 											"top": 486,
 											"width": 210.6279296875,
 											"height": 13,
-											"text": "+bikes: Bike [ ]",
+											"text": "-bikes: Bike [ ]",
 											"horizontalAlignment": 0
 										},
 										{
@@ -146,7 +146,7 @@
 											"top": 501,
 											"width": 210.6279296875,
 											"height": 13,
-											"text": "+bikeStationID: String",
+											"text": "-bikeStationID: String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -163,7 +163,24 @@
 											"top": 516,
 											"width": 210.6279296875,
 											"height": 13,
-											"text": "+cmpTimer: int",
+											"text": "-cmpTimer: int",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGSDynQM+sUAnI=",
+											"_parent": {
+												"$ref": "AAAAAAGSDizH8l75xJ8="
+											},
+											"model": {
+												"$ref": "AAAAAAGSDynQLOsRFc0="
+											},
+											"font": "Arial;13;0",
+											"left": 413,
+											"top": 531,
+											"width": 210.6279296875,
+											"height": 13,
+											"text": "-nbOfBikes: int",
 											"horizontalAlignment": 0
 										}
 									],
@@ -171,7 +188,7 @@
 									"left": 408,
 									"top": 481,
 									"width": 220.6279296875,
-									"height": 53
+									"height": 68
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -194,10 +211,27 @@
 											},
 											"font": "Arial;13;0",
 											"left": 413,
-											"top": 539,
+											"top": 554,
 											"width": 210.6279296875,
 											"height": 13,
-											"text": "+BikeStation(Id: String, capacity: int)",
+											"text": "+BikeStation(Id: String)",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGSDyhysem+Flw=",
+											"_parent": {
+												"$ref": "AAAAAAGSDizH8l76tkU="
+											},
+											"model": {
+												"$ref": "AAAAAAGSDyhypum7Ui8="
+											},
+											"font": "Arial;13;0",
+											"left": 413,
+											"top": 569,
+											"width": 210.6279296875,
+											"height": 13,
+											"text": "+generateCapacity(): int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -211,7 +245,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 413,
-											"top": 554,
+											"top": 584,
 											"width": 210.6279296875,
 											"height": 13,
 											"text": "+getCapacity(): int",
@@ -228,7 +262,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 413,
-											"top": 569,
+											"top": 599,
 											"width": 210.6279296875,
 											"height": 13,
 											"text": "+getId(): String",
@@ -245,10 +279,27 @@
 											},
 											"font": "Arial;13;0",
 											"left": 413,
-											"top": 584,
+											"top": 614,
 											"width": 210.6279296875,
 											"height": 13,
 											"text": "+getNumberOfBikes(): int",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGSDypH/et21k0=",
+											"_parent": {
+												"$ref": "AAAAAAGSDizH8l76tkU="
+											},
+											"model": {
+												"$ref": "AAAAAAGSDypH+utzwac="
+											},
+											"font": "Arial;13;0",
+											"left": 413,
+											"top": 629,
+											"width": 210.6279296875,
+											"height": 13,
+											"text": "+getNbOfBike(): int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -262,7 +313,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 413,
-											"top": 599,
+											"top": 644,
 											"width": 210.6279296875,
 											"height": 13,
 											"text": "+firstFreeSlot(): int",
@@ -279,7 +330,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 413,
-											"top": 614,
+											"top": 659,
 											"width": 210.6279296875,
 											"height": 13,
 											"text": "+dropBike(Bike bike): void",
@@ -296,7 +347,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 413,
-											"top": 629,
+											"top": 674,
 											"width": 210.6279296875,
 											"height": 13,
 											"text": "+takeBike(Bike bike): void",
@@ -305,9 +356,9 @@
 									],
 									"font": "Arial;13;0",
 									"left": 408,
-									"top": 534,
+									"top": 549,
 									"width": 220.6279296875,
-									"height": 113
+									"height": 143
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -1932,6 +1983,7 @@
 								"$ref": "AAAAAAGSDizH8V7xr0s="
 							},
 							"name": "bikes",
+							"visibility": "private",
 							"type": "Bike [ ]"
 						},
 						{
@@ -1941,6 +1993,7 @@
 								"$ref": "AAAAAAGSDizH8V7xr0s="
 							},
 							"name": "bikeStationID",
+							"visibility": "private",
 							"type": "String"
 						},
 						{
@@ -1950,6 +2003,17 @@
 								"$ref": "AAAAAAGSDizH8V7xr0s="
 							},
 							"name": "cmpTimer",
+							"visibility": "private",
+							"type": "int"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGSDynQLOsRFc0=",
+							"_parent": {
+								"$ref": "AAAAAAGSDizH8V7xr0s="
+							},
+							"name": "nbOfBikes",
+							"visibility": "private",
 							"type": "int"
 						}
 					],
@@ -1970,15 +2034,25 @@
 									},
 									"name": "Id",
 									"type": "String"
-								},
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGSDyhypum7Ui8=",
+							"_parent": {
+								"$ref": "AAAAAAGSDizH8V7xr0s="
+							},
+							"name": "generateCapacity",
+							"parameters": [
 								{
 									"_type": "UMLParameter",
-									"_id": "AAAAAAGSDjSjDF9vjRM=",
+									"_id": "AAAAAAGSDyihsunyMBE=",
 									"_parent": {
-										"$ref": "AAAAAAGSDjQj819n9mA="
+										"$ref": "AAAAAAGSDyhypum7Ui8="
 									},
-									"name": "capacity",
-									"type": "int"
+									"type": "int",
+									"direction": "return"
 								}
 							]
 						},
@@ -2033,6 +2107,25 @@
 									"_id": "AAAAAAGSDjggLl+N/ng=",
 									"_parent": {
 										"$ref": "AAAAAAGSDjfwWl+GhqE="
+									},
+									"type": "int",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGSDypH+utzwac=",
+							"_parent": {
+								"$ref": "AAAAAAGSDizH8V7xr0s="
+							},
+							"name": "getNbOfBike",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGSDypxWeu8yFE=",
+									"_parent": {
+										"$ref": "AAAAAAGSDypH+utzwac="
 									},
 									"type": "int",
 									"direction": "return"
