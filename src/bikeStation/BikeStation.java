@@ -28,7 +28,7 @@ public class BikeStation{
         return 10 + BikeStation.random.nextInt(10);
     }
 
-    /*Renvoie la liste de tout les emplacements de la sation*/ 
+    /*Renvoie la liste de tout les emplacements de la sation*/  
     public Bike[] getBikes(){
         return this.bikes;
     }
@@ -65,6 +65,6 @@ public class BikeStation{
 
     /*Permet de deposer un velo dans le premier emplacement vide de la station */
     public void dropBike(Bike bike) {
-        
+
     }
 }
