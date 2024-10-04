@@ -12,6 +12,6 @@ public class ClassicalBike extends Bike {
      * @param Id the identifier of the Classical Bike
      */
     public ClassicalBike() {
-
+        super(BikeId);
     }
 }
