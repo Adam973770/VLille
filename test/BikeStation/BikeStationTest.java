@@ -5,6 +5,7 @@ package test.BikeStation;
 import BikeStation.BikeStation;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
+
 public class BikeStationTest {
     
     private BikeStation bikeStation;
