@@ -5,10 +5,10 @@ package Bike;
 public class ElectricBike extends Bike {
     
     /** number of maximum usage for an electric bike */
-    protected static final int LIMIT_OF_USAGE = 8;
+    public static final int LIMIT_OF_USAGE = 8;
 
-    public ElectricBike(){
-        super(BikeId);
+    public ElectricBike(String ElectricBikeId) {
+        super(ElectricBikeId);
     }
     
 }

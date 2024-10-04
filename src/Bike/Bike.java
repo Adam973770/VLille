@@ -68,12 +68,12 @@ public class Bike {
      * @param equipment the equipment to add
      */
     public void addEquipment(Equipment equipment) {
-        for (Equipment otherEquipment : this.getTheEquipments) {
+        for (Equipment otherEquipment : this.getTheEquipments()) {
             if (otherEquipment.equals(equipment)) {
                 return ;
             }
         }
-        this.getTheEquipments.add(equipment);
+        this.getTheEquipments().add(equipment);
     }
 
     /**
