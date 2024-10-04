@@ -1,4 +1,4 @@
-package Bike;
+package VLille.Bike;
 /**
  * class for ClassicalBike 
  */

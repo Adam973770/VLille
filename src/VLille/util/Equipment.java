@@ -1,4 +1,4 @@
-package util;
+package VLille.util;
 /**
  * Enum class for all the different type of Equipment
  */

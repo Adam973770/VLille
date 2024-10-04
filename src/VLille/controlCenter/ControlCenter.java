@@ -1,4 +1,4 @@
-package controlCenter;
+package VLille.controlCenter;
 /**
  * class for ControlCenter
  */

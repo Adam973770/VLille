@@ -1,6 +1,6 @@
-package Bike;
+package VLille.Bike;
 import java.util.*;
-import util.*;
+import VLille.util.*;
 /**
  * class for a Bike 
  */
