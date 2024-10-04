@@ -56,6 +56,27 @@ public class Bike {
     }
 
     /**
+     * Get an equipment 
+     * @return the equipment i want to get
+     */
+    public List<Equipment> getTheEquipments () {
+        return this.equipments;
+    } 
+
+    /**
+     * Add an equipment to the List of equipments
+     * @param equipment the equipment to add
+     */
+    public void addEquipment(Equipment equipment) {
+        for (Equipment otherEquipment : this.getTheEquipments) {
+            if (otherEquipment.equals(equipment)) {
+                return ;
+            }
+        }
+        this.getTheEquipments.add(equipment);
+    }
+
+    /**
      * Two bikes are equal if they have the same identifier
      * @param obj the object to compare
      * @return true if the objects are equal
