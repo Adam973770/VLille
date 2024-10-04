@@ -84,4 +84,32 @@ public class BikeStation{
     public String toString() {
         return "BikeStation : " + this.getBikeStationId();
     }
+
+    /**permet d'obtenir le premier emplacement libre de la bikeStation */
+    public int firstFreeSlot(){
+        int i;
+        for (i=0; i<this.getCapacity; i++){
+            if (this.theBikes.get(i)!=null){
+                return i;
+            }
+        }
+        return -1;
+    }
+    /**permet d'ajouter un bike a la station */
+    public void addBike(Bike bike){
+        if (firstFreeSlot()!=-1){
+            this.theBikes.add(firstFreeSlot());
+        }
+    }
+
+    /**permet d'enlever un bike de la station */
+    public void removeBike(int b) throws bikeNotInBikeStationException {
+        if (b > this.getCapacity){
+            System.out.println("out of range");
+        }
+        if (this.theBikes.get(b)==null){
+            throw bikeNotInBikeStationException();
+        }
+        this.theBikes.remove(b);
+    }
 }
