@@ -1,4 +1,4 @@
-package VLille.Bike;
+package VLille.vehicle.Bike;
 import java.util.*;
 import VLille.util.*;
 /**
