@@ -1,17 +1,13 @@
 package VLille.vehicle.Bike;
-/**
- * class for ClassicalBike 
- */
+import VLille.vehicle.*;
+
 public class ClassicBike extends Bike {
-    
-    /** number of maximum usage for a classical bike */
+        
     public static final int LIMIT_OF_USAGE = 5;
 
-    /**
-     * Build a Classical Bike 
-     * @param Id the identifier of the Classical Bike
-     */
     public ClassicBike(String classicBikeId) {
-        super(classicBikeId);
+        this.libelle = "Classic Bike ";
+        this.bikeId = classicBikeId;
+        this.nbUsage = 0;
     }
 }
