@@ -1,19 +1,13 @@
 package VLille.vehicle.Bike;
+import VLille.vehicle.*;
 
-/**
- * class for ElectricBike
- */
 public class ElectricBike extends Bike {
+        
+    public static final int LIMIT_OF_USAGE = 5;
 
-    /** number of maximum usage for an electric bike */
-    public static final int LIMIT_OF_USAGE = 8;
-
-    /**
-     * Build a Classical Bike
-     * @param Id the identifier of the Classical Bike
-     */
-    public ElectricBike(String ElectricBikeId) {
-        super(ElectricBikeId);
+    public ElectricBike(String electricBikeId) {
+        this.libelle = "Electric Bike ";
+        this.bikeId = electricBikeId;
+        this.nbUsage = 0;
     }
-
 }
