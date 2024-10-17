@@ -1,7 +1,7 @@
 package VLille.user;
 import VLille.vehicle.Bike.*;
 
-public class User{
+public abstract class User{
     protected String firstName;
     protected String secondName;
     protected int age;
@@ -36,15 +36,5 @@ public class User{
 
     public Bike getOwnedBike(){
         return ownedBike;
-    }
-
-    public User(UserBuilder builder){
-        this.firstName = builder.getFirstName();
-        this.secondName = builder.getSecondName();
-        this.age = builder.getAge();
-        this.gender = builder.getGender();
-        this.adress = builder.getAdress();
-        this.numTel = builder.getNumTel();
-        this.ownedBike = builder.getOwnedBike();
     }
 }
