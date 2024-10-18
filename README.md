@@ -36,3 +36,16 @@
 
 5. Les objets de type ControlCenter / se trouvant dans le dossier src/VLille/controlCenter
     - La classe **ControlCenter** représente le centre de controle de la ville qui se charger de superviser l’ensemble de la flotte de vélos et des stations
+
+## Déroulement du projet : 
+### Semaine 1 :
+Commencement de la création de l'Uml du projet.
+
+### Semaine 2 :
+Décision de quel pattern vont être utilisé lors du projet :
+    - pattern Builder pour les User
+    - pattern Factory pour les BikeStation
+    - pattenr Decorator pour les Bike
+    - pattern Singleton ou Factory pour pour le ControlCenter
+
+### Semaine 3 :
