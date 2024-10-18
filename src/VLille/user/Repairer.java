@@ -8,7 +8,7 @@ public Repairer(RepairerBuilder builder) {
     this.secondName = builder.secondName;
     this.age = builder.age;
     this.gender = builder.gender;
-    this.adress = builder.adress;
+    this.address = builder.address;
     this.numTel = builder.numTel;
     this.ownedBike = builder.ownedBike;
 }
@@ -24,7 +24,7 @@ public static class RepairerBuilder {
     private String secondName;
     private int age;
     private String gender;
-    private String adress;
+    private String address;
     private String numTel;
     private Bike ownedBike;
 
@@ -78,8 +78,8 @@ public static class RepairerBuilder {
      * @param adress The address of the repairer.
      * @return The current `RepairerBuilder` instance.
      */
-    public RepairerBuilder setAdress(String adress) {
-        this.adress = adress;
+    public RepairerBuilder setAddress(String adress) {
+        this.address = address;
         return this;
     }
 

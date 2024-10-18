@@ -8,7 +8,7 @@ public class Renter extends User{
         this.secondName = builder.secondName;
         this.age = builder.age;
         this.gender = builder.gender;
-        this.adress = builder.adress;
+        this.address = builder.address;
         this.numTel = builder.numTel;
         this.ownedBike = builder.ownedBike;
     }
@@ -18,7 +18,7 @@ public class Renter extends User{
         private String secondName;
         private int age;
         private String gender;
-        private String adress;
+        private String address;
         private String numTel;
         private Bike ownedBike; 
 
@@ -42,8 +42,8 @@ public class Renter extends User{
             return this;
         }
 
-        public RenterBuilder setAdress(String adress){
-            this.adress = adress;
+        public RenterBuilder setAddress(String adress){
+            this.address = address;
             return this;
         }   
 

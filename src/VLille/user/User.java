@@ -6,7 +6,7 @@ public abstract class User{
     protected String secondName;
     protected int age;
     protected String gender;
-    protected String adress;
+    protected String address;
     protected String numTel;
     protected Bike ownedBike;
 
@@ -26,8 +26,8 @@ public abstract class User{
         return gender;
     }
 
-    public String getAdress(){
-        return adress;
+    public String getAddress(){
+        return address;
     }
 
     public String getNumTel(){
