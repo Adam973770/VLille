@@ -1,17 +1,21 @@
 package VLille.controlCenter;
+import VLille.Station.*;
+import java.util.*;
+import VLille.vehicle.*;
+import VLille.user.*;
 /**
  * class for ControlCenter
  */
 public class ControlCenter{
-    /**création sous forme de singleton */
+
     private static ControlCenter uniqueInstance;
 
-    private int timer;
-    private ArrayList<BikeStation> allBikeStation;
+    private ArrayList<Station> allStation;
+    private Map<User, Vehicle> allNotAvailableVehicles;
 
-    private ControlCenter(int size){
-        this.timer=0;
-        this.allBikeStation= new ArrayList<BikeStation>(size);
+    private ControlCenter(){
+        this.allStation = new ArrayList<Station>();
+        this.allNotAvailableVehicles = new HashMap<User, Vehicle>();
     }
 
     public static ControlCenter getInstance(){
@@ -21,13 +25,11 @@ public class ControlCenter{
         return uniqueInstance;
     }
 
-    public int getTimer(){
-        return this.timer;
+    public ArrayList<Station> getAllBikeStation(){
+        return this.allStation;
     }
 
-    public ArrayList<BikeStation> getAllBikeStation(){
-        return this.allBikeStation;
+    public Map<User, Vehicle> getAllNotAvailableVehicles(){
+        return this.allNotAvailableVehicles;
     }
-
-
 }
