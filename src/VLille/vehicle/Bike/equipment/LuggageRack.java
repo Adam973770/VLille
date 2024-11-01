@@ -10,12 +10,4 @@ public class LuggageRack extends DecorateurBike {
     public String getLibelle() {
         return bike.getLibelle() + "+ LuggageRack ";
     }
-
-    public int getNbUsage(){
-        return bike.getNbUsage();
-    }
-
-    public String getBikeId(){
-        return bike.getBikeId();
-    }
 }

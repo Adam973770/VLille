@@ -10,12 +10,4 @@ public class Flashlight extends DecorateurBike {
     public String getLibelle() {
         return bike.getLibelle() + "+ Flashlight ";
     }
-
-    public int getNbUsage(){
-        return bike.getNbUsage();
-    }
-
-    public String getBikeId(){
-        return bike.getBikeId();
-    }
 }

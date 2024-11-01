@@ -30,28 +30,4 @@ public class Bottle extends DecorateurBike {
     public String getLibelle() {
         return bike.getLibelle() + "+ Bottle ";
     }
-
-    /**
-     * Returns the number of usages (nbUsage) for the bike.
-     * 
-     * This method simply forwards the request to the decorated bike object.
-     * 
-     * @return The number of usages of the bike.
-     */
-    @Override
-    public int getNbUsage() {
-        return bike.getNbUsage();
-    }
-
-    /**
-     * Returns the bike's unique ID (bikeId).
-     * 
-     * This method simply forwards the request to the decorated bike object.
-     * 
-     * @return The bike's unique ID.
-     */
-    @Override
-    public String getBikeId() {
-        return bike.getBikeId();
-    }
 }
