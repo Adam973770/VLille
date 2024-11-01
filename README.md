@@ -3,12 +3,20 @@
 ## Membre du Projet 
 
 - Adam RAMJATTAN
+    - Numéro étudiant : 42140181
+    - L3 INFO
+    - Groupe 6
 
 ## Architecture du depôt 
 
 1. Le dossier **src/VLille** contient tous les fichier source du projet
 2. Le dossier **test/VLille** contient tous les fichier test du projet
 3. Le fichier **UML Projet VeLib.mdj** est l'Uml du projet
+4. Le fichier **UML.svg** est l'Uml du projet mais en svg
+
+## UML
+
+![UML](UML.svg)
 
 ## Explication de l'Uml
 
@@ -39,13 +47,24 @@
 
 ## Déroulement du projet : 
 ### Semaine 1 :
-Commencement de la création de l'Uml du projet.
+Commencement de la création de l'Uml du projet sans l'utilisation des pattern.
 
 ### Semaine 2 :
-Décision de quel pattern vont être utilisé lors du projet :
-    - pattern Builder pour les User
-    - pattern Factory pour les BikeStation
-    - pattenr Decorator pour les Bike
-    - pattern Singleton ou Factory pour pour le ControlCenter
+Implémentaion de certaines classes sans l'uilisation des pattern : Bike, BikeStation, ControlCenter, User, Equipment
 
 ### Semaine 3 :
+Décision de quel pattern vont être utilisé lors du projet :
+
+    - pattern Builder pour les User
+    - pattern Factory pour les Station
+    - pattenr Decorator pour les Vehicle
+    - pattern Singleton ou Factory pour le ControlCenter
+
+### Semaine 4 :
+Implemention de certaines classes avec cette fois-ci l'utilisation des pattern : User, Painter, Repairer, Renter
+
+### Semaine 5 :
+Implemention de certaines classes avec cette fois-ci l'utilisation des pattern : Vehicle, Bike, ClassicBike, ElectricBike, DecorateurBike, Basket, Bottle, Flashlight, LuggageRack
+
+### Semaine 6 :
+Implemention de certaines classes avec cette fois-ci l'utilisation des pattern : ControlCenter, Station, BikeStation, StationFactory, StationFactorylmpl
