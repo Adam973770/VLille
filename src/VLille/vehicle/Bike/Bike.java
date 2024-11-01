@@ -1,34 +1,8 @@
 package VLille.vehicle.Bike;
-public abstract class Bike {
-    protected String libelle;
-    protected String bikeId;
-    protected int nbUsage;
-
-    public String getLibelle(){
-        return this.libelle;
-    }
-
-    public String getBikeId(){
-        return this.bikeId;
-    }
-
-    public int getNbUsage(){
-        return this.nbUsage;
-    }
-
-    protected void setLibelle(String l){
-        this.libelle = l;
-    }
-
-    protected void setBikeId(String id){
-        this.bikeId = id;
-    }
-
-    protected void setNbUsage(int u){
-        this.nbUsage = u;
-    }
+import VLille.vehicle.*;
+public abstract class Bike extends Vehicle {
 
     public String toString() { 
-        return getLibelle() + "Id Bike : " + getBikeId() + ", Nombre d'usage : " + getNbUsage(); 
+        return getLibelle() + "Id Bike : " + getVehicleId() + ", Nombre d'usage restant : " + getNbUsage(); 
     }
 }
