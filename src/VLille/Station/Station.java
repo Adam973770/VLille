@@ -14,6 +14,11 @@ public abstract class Station {
     protected String id;
     protected Random random;
 
+    /**
+     * Constructs a new `Station` Object
+     * 
+     * @param controlCenter The `controlCenter` object in charge of the station
+     */
     public Station(ControlCenter controlCenter){
         this.allVehicle = new ArrayList<Vehicle>();
         this.capacity = random.nextInt(10) + 10;
@@ -26,26 +31,56 @@ public abstract class Station {
         }
     }
 
+    /**
+     * Return the list of all the vehicle in the station
+     * 
+     * @return The current list of the vehicle in the station
+     */
     public List<Vehicle> getAllVehicle() {
         return this.allVehicle;
     }
 
+    /**
+     * Return the capacity of the station
+     * 
+     * @return The capacity of the station
+     */
     public int getCapacity() {
         return this.capacity;
     }
 
+    /**
+     * Return the control center in charge of the station
+     * 
+     * @return The current ControlCenter in charge of the station
+     */
     public ControlCenter getControlCenter() {
         return this.controlCenter;
     }
 
+    /**
+     * Return the Id (identification) of the station that is unique for each station Object
+     * 
+     * @return The current Id of the station
+     */
     public String getId() {
         return this.id;
     }
 
+    /**
+     * Return the object random use to create a random Id
+     * 
+     * @return The current random
+     */
     public Random getRandom() {
         return this.random;
     } 
 
+    /**
+     * Specify if the station is empty or not
+     * 
+     * @return true if the station is empty else false if the station has at least one vehicle 
+     */
     public boolean isEmpty(){
         for (Vehicle vehicle : allVehicle){
             if (vehicle != null){
@@ -55,8 +90,12 @@ public abstract class Station {
         return true;
     }
 
-    public boolean isFull(){
-        int stock=0;
+    /**
+     * Specify if the station is full or not
+     * 
+     * @return false if the station is not full else true
+     */
+    public boolean isFull(){;
         for (Vehicle vehicle : allVehicle){
             if (vehicle == null){
                 return false;
@@ -65,6 +104,12 @@ public abstract class Station {
         return true;
     }
 
+    /**
+     * Drop a `Vehicle` Object in the station if the station is not full
+     * 
+     * @param v The vehicle that i want to drop in the station
+     * @throws StationIsFullException if the station is already full before droping the Vehicle
+     */
     public void dropVehicle(Vehicle v) throws StationIsFullException {
         if (isFull()){
             throw new StationIsFullException("Station is full, cannot drop a vehicle");
@@ -76,6 +121,12 @@ public abstract class Station {
         }
     }
 
+    /**
+     * Take the first `Vehicle` Object in the station 
+     * 
+     * @throws StationIsAlreadyEmpty if the station is already empty
+     * @return The `Vehicle` Object that has been take in the station
+     */
     public Vehicle takeVehicle() throws StationIsAlreadyEmpty {
         if (isEmpty()){
             throw new StationIsAlreadyEmpty("Station is already empty");
@@ -90,6 +141,12 @@ public abstract class Station {
         return null;
     }
 
+    /**
+     * empty the station of all the `Vehicle` object
+     * 
+     * @throws StationIsAlreadyEmpty if the station is already empty
+     * @return The list of all the vehicle that was in the station
+     */
     public List<Vehicle> takeAllVehicle() throws StationIsAlreadyEmpty {
         if (isFull()){
             throw new StationIsAlreadyEmpty("Station is already empty");

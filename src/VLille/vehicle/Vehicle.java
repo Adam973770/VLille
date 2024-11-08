@@ -10,6 +10,9 @@ public abstract class Vehicle {
     protected String color;
     protected Random random;
 
+    /**
+     * Contructs a new `Vehicle` Object
+     */
     public Vehicle(){
         this.nbUsage = LIMIT_OF_USAGE;
         this.currentRenter = null;
@@ -18,26 +21,56 @@ public abstract class Vehicle {
         this.vehicleId = "Vehicle " + random.nextInt(10000);
     }
 
+    /**
+     * Return the libelle of the vehicle
+     * 
+     * @return The current libelle of the vehicle
+     */
     public String getLibelle(){
         return this.libelle;
     }
 
+    /**
+     * Return the Id (identification) of the vehicle
+     * 
+     * @return The current id of the vehicle
+     */
     public String getVehicleId(){
         return this.vehicleId;
     }
 
+    /**
+     * Return the number of time that a vehicle has been use 
+     * 
+     * @return The current number of time that the vehicle has been use
+     */
     public int getNbUsage(){
         return this.nbUsage;
     }
 
+    /**
+     * Set the libelle of the vehicle
+     * 
+     * @param l The libelle of the vehicle
+     */
     protected void setLibelle(String l){
         this.libelle = l;
     }
 
+    /**
+     * Set the Id (identification) of the vehicle
+     * 
+     * @param id The Id of the vehicle
+     */
     protected void setVehicleId(String id){
         this.vehicleId = id;
     }
 
+    /**
+     * Set the number of usage of a vehicle
+     * 
+     * @param u The current number of usage of the vehicle
+     */
     protected void setNbUsage(int u){
         this.nbUsage = u;
     }
