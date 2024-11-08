@@ -12,7 +12,8 @@
 1. Le dossier **src/VLille** contient tous les fichier source du projet
 2. Le dossier **test/VLille** contient tous les fichier test du projet
 3. Le fichier **UML Projet VeLib.mdj** est l'Uml du projet
-4. Le fichier **UML.svg** est l'Uml du projet mais en svg
+4. Le fichier **UML.svg** est l'Uml du projet mais en format svg
+5. Le fichier **UML.pdf** est l'Uml du projet mais en format pdf
 
 ## UML
 
@@ -43,14 +44,19 @@
 4. Les objets de type ControlCenter / se trouvant dans le dossier src/VLille/controlCenter
     - La classe **ControlCenter** représente le centre de controle de la ville qui se charger de superviser l’ensemble de la flotte de vélos et des stations, elle est impementé en utilisant le pattern Singleton
 
+## Pattern utilisé (justification de leur utilisation) :
+- Singleton : Sur la classe ControlCenter car dans mon projet je veut avoir que un centre de controle
+- Decorator : 
+- Factory Method :
+- Builder : sur les User car un objet user possede beaucoup de caractéristiques, donc j'utilise le pattern builder pour simplifier le création d'un objet de type User
+
 ## Déroulement du projet : 
 ### Semaine 1 :
 Commencement de la création de l'Uml du projet sans l'utilisation des pattern.
 
-### Semaine 2 :
 Implémentaion de certaines classes sans l'uilisation des pattern : Bike, BikeStation, ControlCenter, User, Equipment
 
-### Semaine 3 :
+### Semaine 2 :
 Décision de quel pattern vont être utilisé lors du projet :
 
     - pattern Builder pour les User
@@ -58,11 +64,17 @@ Décision de quel pattern vont être utilisé lors du projet :
     - pattenr Decorator pour les Vehicle
     - pattern Singleton ou Factory pour le ControlCenter
 
-### Semaine 4 :
 Implemention de certaines classes avec cette fois-ci l'utilisation des pattern : User, Painter, Repairer, Renter
 
-### Semaine 5 :
+### Semaine 3 :
 Implemention de certaines classes avec cette fois-ci l'utilisation des pattern : Vehicle, Bike, ClassicBike, ElectricBike, DecorateurBike, Basket, Bottle, Flashlight, LuggageRack
 
-### Semaine 6 :
 Implemention de certaines classes avec cette fois-ci l'utilisation des pattern : ControlCenter, Station, BikeStation, StationFactory, StationFactorylmpl
+
+### Semaine 4 :
+
+
+### Semaine 5 :
+
+
+### Semaine 6 :
