@@ -6,9 +6,9 @@ import VLille.vehicle.*;
 import VLille.Exceptions.*;
 import VLille.controlCenter.*;
 
-public abstract class Station {
+public abstract class Station implements ControlCenterObserver{
 
-    protected List<Vehicle> allVehicle;
+    protected ArrayList<Vehicle> allVehicle;
     protected int capacity;
     protected ControlCenter controlCenter;
     protected String id;
@@ -160,6 +160,10 @@ public abstract class Station {
             }
         }
         return vehicles;
+    }
+
+    public void update(String message) {
+        System.out.println("Station " + this.id + " a reçu la notification : " + message);
     }
 
     public String toString() {
