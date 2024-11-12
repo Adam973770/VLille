@@ -45,10 +45,11 @@
     - La classe **ControlCenter** représente le centre de controle de la ville qui se charger de superviser l’ensemble de la flotte de vélos et des stations, elle est impementé en utilisant le pattern Singleton
 
 ## Pattern utilisé (justification de leur utilisation) :
-- Singleton : Sur la classe ControlCenter car dans mon projet je veut avoir que un centre de controle
-- Decorator : 
-- Factory Method :
+- Singleton : Sur la classe ControlCenter car dans mon projet je veut avoir que un seul et unique centre de controle
+- Decorator : Sur la Bike, j'aurais aussi pu utiliser ce pattern sur la Vehicle, mais préféré le faire sur la classe Bike. 
+- Factory Method : Je l'ai utilisé sur la classe Station car on pourrais peut être rajouter d'autre type de station autre que des BikeStation.
 - Builder : sur les User car un objet user possede beaucoup de caractéristiques, donc j'utilise le pattern builder pour simplifier le création d'un objet de type User
+- Observer : Sur la classe ControlCenter pour pouvoir recevoir ce que l'on vas appeler des notifications pour que le centre de controle informe des ajouts de station ou des ajouts de vehicle
 
 ## Déroulement du projet : 
 ### Semaine 1 :
@@ -72,7 +73,7 @@ Implemention de certaines classes avec cette fois-ci l'utilisation des pattern :
 Implemention de certaines classes avec cette fois-ci l'utilisation des pattern : ControlCenter, Station, BikeStation, StationFactory, StationFactorylmpl
 
 ### Semaine 4 :
-
+Debut de l'implementation de ControlCenter avec le pattern Observer et ajout d'un état dans un Vehicle pour savoir si le vehicule est disponible ou non 
 
 ### Semaine 5 :
 
