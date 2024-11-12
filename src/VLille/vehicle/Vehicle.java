@@ -9,6 +9,7 @@ public abstract class Vehicle {
     protected User currentRenter;
     protected String color;
     protected Random random;
+    protected State state = new Available();
 
     /**
      * Contructs a new `Vehicle` Object
@@ -19,6 +20,25 @@ public abstract class Vehicle {
         this.color= "red";
         this.random = new Random();
         this.vehicleId = "Vehicle " + random.nextInt(10000);
+        this.state = new Available();
+    }
+
+    /**
+     * change the state of the vehicle
+     * 
+     * @param state The state of the vehicle
+     */
+    public void setState(State state) {
+        this.state = state;
+    }
+
+    /**
+     * return if the vehicle is available or not
+     * 
+     * @return the current state of the vehicle
+     */
+    public boolean vehicleAvailable(){
+        return this.state.available();
     }
 
     /**
@@ -76,6 +96,6 @@ public abstract class Vehicle {
     }
 
     public String toString() { 
-        return getLibelle() + "Id Vehicle : " + getVehicleId() + ", Nombre d'usage restant : " + getNbUsage(); 
+        return getLibelle() + "Id Vehicle : " + getVehicleId(); 
     }
 }
