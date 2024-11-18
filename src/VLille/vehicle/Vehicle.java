@@ -96,6 +96,6 @@ public abstract class Vehicle {
     }
 
     public String toString() { 
-        return getLibelle() + "Id Vehicle : " + getVehicleId(); 
+        return getLibelle() + "Id Bike : " + getVehicleId() + ", Nombre d'usage restant : " + getNbUsage(); 
     }
 }
