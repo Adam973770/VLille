@@ -5,7 +5,9 @@ import VLille.vehicle.Bike.*;
 import VLille.vehicle.*;
 import VLille.Exceptions.*;
 import VLille.controlCenter.*;
-
+/**
+ * class for Station
+ */
 public abstract class Station implements ControlCenterObserver{
 
     protected ArrayList<Vehicle> allVehicle;
