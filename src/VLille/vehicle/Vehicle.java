@@ -1,6 +1,9 @@
 package VLille.vehicle;
 import VLille.user.*;
 import java.util.*;
+/**
+ * class for Vehicle
+ */
 public abstract class Vehicle {
     public static final int LIMIT_OF_USAGE = 5;
     protected String libelle;
@@ -95,7 +98,10 @@ public abstract class Vehicle {
         this.nbUsage = u;
     }
 
+    /**
+     * return the description of a Vehicle Object
+     */
     public String toString() { 
         return getLibelle() + "Id Bike : " + getVehicleId() + ", Nombre d'usage restant : " + getNbUsage(); 
     }
-}
+}                                                      
