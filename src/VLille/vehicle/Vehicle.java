@@ -12,7 +12,7 @@ public abstract class Vehicle {
     protected User currentRenter;
     protected String color;
     protected Random random;
-    protected State state = new Available();
+    protected State state;
 
     /**
      * Contructs a new `Vehicle` Object
@@ -23,7 +23,7 @@ public abstract class Vehicle {
         this.color= "red";
         this.random = new Random();
         this.vehicleId = "Vehicle " + random.nextInt(10000);
-        this.state = new Available();
+        this.state = new NotRentedState(this);
     }
 
     /**
@@ -33,6 +33,15 @@ public abstract class Vehicle {
      */
     public void setState(State state) {
         this.state = state;
+    }
+
+    /**
+     * return the description of the vehicle state
+     * 
+     * @return the actual state description of the vehicle
+     */
+    public String getState(){
+        return this.state.getStateDescription();
     }
 
     /**
@@ -102,6 +111,6 @@ public abstract class Vehicle {
      * return the description of a Vehicle Object
      */
     public String toString() { 
-        return getLibelle() + "Id Bike : " + getVehicleId() + ", Nombre d'usage restant : " + getNbUsage(); 
+        return getLibelle() + " | Id Bike : " + getVehicleId() + " | Nombre d'usage restant : " + getNbUsage() + " | State : " + this.state.getStateDescription(); 
     }
 }                                                      
