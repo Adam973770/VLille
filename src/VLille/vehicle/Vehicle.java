@@ -2,7 +2,7 @@ package VLille.vehicle;
 import VLille.user.*;
 import java.util.*;
 /**
- * class for Vehicle
+ * Class for Vehicle
  */
 public abstract class Vehicle {
     public static final int LIMIT_OF_USAGE = 5;
@@ -27,6 +27,34 @@ public abstract class Vehicle {
     }
 
     /**
+     * change the state of the bike to Rented
+     */
+    public void rented(){
+        state.rented();
+    }
+
+    /**
+     * change the state of the bike to Not rented
+     */
+    public void notRented(){    
+        state.notRented();
+    }
+
+    /**
+     * change the state of the bike to Stealed
+     */
+    public void stealed(){
+        state.stealed();
+    }
+
+    /**
+     * change the state of the bike to Broken
+     */
+    public void broken(){
+        state.broken();
+    }
+
+    /**
      * change the state of the vehicle
      * 
      * @param state The state of the vehicle
@@ -42,15 +70,6 @@ public abstract class Vehicle {
      */
     public String getState(){
         return this.state.getStateDescription();
-    }
-
-    /**
-     * return if the vehicle is available or not
-     * 
-     * @return the current state of the vehicle
-     */
-    public boolean vehicleAvailable(){
-        return this.state.available();
     }
 
     /**
