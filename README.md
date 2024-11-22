@@ -50,6 +50,13 @@
 - Factory Method : Je l'ai utilisé sur la classe Station car on pourrais peut être rajouter d'autre type de station autre que des BikeStation.
 - Builder : sur les User car un objet user possede beaucoup de caractéristiques, donc j'utilise le pattern builder pour simplifier le création d'un objet de type User
 - Observer : Sur la classe ControlCenter pour pouvoir recevoir ce que l'on vas appeler des notifications pour que le centre de controle informe des ajouts de station ou des ajouts de vehicle
+- State : implementation du pattern State pour représenter les différents états des objets Vehicle (Broken, Rented, Not rented, Stealed)
+
+# Commande de compilation (depuis le dossier VLille):
+## Linux
+```javac -d ../class $(find . -name "*.java")```
+Main : ```java -cp ../class VLille.Main```
+## Windows
 
 ## Déroulement du projet : 
 ### Semaine 1 :
@@ -76,6 +83,6 @@ Implemention de certaines classes avec cette fois-ci l'utilisation des pattern :
 Debut de l'implementation de ControlCenter avec le pattern Observer et ajout d'un état dans un Vehicle pour savoir si le vehicule est disponible ou non 
 
 ### Semaine 5 :
-
+Implementation compléte du pattern State sur les Vehicle ainsi que son ajout dans l'UML
 
 ### Semaine 6 :
