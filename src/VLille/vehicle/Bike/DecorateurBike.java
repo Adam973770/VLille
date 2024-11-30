@@ -2,10 +2,19 @@ package VLille.vehicle.Bike;
 import VLille.vehicle.*;
 
 /**
- * class for `DecorateurBike` Object
+ * Abstract class for `DecorateurBike`, representing a decorator for an Object Bike, allowing modifications to a Bike object
  */
 public abstract class DecorateurBike extends Bike {
-    protected Bike bike;
 
+    /**
+     * The bike being decorated 
+     */
+    protected Bike bike;
+    
+    /**
+     * Retrieves the label of the decorated bike
+     * 
+     * @return The current label of a bike
+     */
     public abstract String getLibelle();
 }
