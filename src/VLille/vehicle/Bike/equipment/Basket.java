@@ -1,3 +1,10 @@
+/**
+ * The `Basket` class is a decorator for the `Bike` class, which adds the functionality of a basket to a bike.
+ * This class is part of the decorator pattern used to dynamically add functionality to bikes in the VLille system.
+ * 
+ * The `Basket` class extends `DecorateurBike`, which allows it to "decorate" or enhance a `Bike` object
+ * by adding new behavior while keeping the core functionality of the bike intact.
+ */
 package VLille.vehicle.Bike.equipment;
 import VLille.vehicle.*;
 import VLille.vehicle.Bike.*;
