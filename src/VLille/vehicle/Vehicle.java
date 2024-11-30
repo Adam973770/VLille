@@ -13,6 +13,7 @@ public abstract class Vehicle {
     protected String color;
     protected Random random;
     protected State state;
+    protected int intervaleBeforeSteal;
 
     /**
      * Contructs a new `Vehicle` Object
@@ -24,6 +25,7 @@ public abstract class Vehicle {
         this.random = new Random();
         this.vehicleId = "Vehicle " + random.nextInt(10000);
         this.state = new NotRentedState(this);
+        this.intervaleBeforeSteal = 2;
     }
 
     /**
@@ -72,12 +74,30 @@ public abstract class Vehicle {
     }
 
     /**
+     * Return the attribute random of the vehicle 
+     * 
+     * @return The current attribute random of the vehicle
+     */
+    public Random getRandom(){
+        return this.random;
+    }
+
+    /**
      * return the description of the vehicle state
      * 
      * @return the actual state description of the vehicle
      */
     public String getState(){
         return this.state.getStateDescription();
+    }
+
+    /**
+     * Return the intervale remaining before a vehicle can be steal
+     * 
+     * @return the intervale remaining before a vehicle can be steal
+     */
+    public int getIntervaleBeforeSteal(){
+        return this.intervaleBeforeSteal;
     }
 
     /**
@@ -132,6 +152,15 @@ public abstract class Vehicle {
      */
     public void setState(State state) {
         this.state = state;
+    }
+
+    /**
+     * change the interval remaining before a vehicle can be steal
+     * 
+     * @param state the new interval
+     */
+    public void setIntervaleBeforeSteal(int inter){
+        this.intervaleBeforeSteal = inter;
     }
 
     /**
