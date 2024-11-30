@@ -1,8 +1,11 @@
 package VLille.user;
 import VLille.vehicle.Bike.*;
 import VLille.vehicle.*;
+import java.util.*;
 
 public class Thief extends User{
+    /**List of all the vehicle the thief have steal */
+    private List<Vehicle> vehiclesteal;
 
     /**
      * Constructs a new `Thief` object based on the provided `ThiefBuilder`.
@@ -17,6 +20,25 @@ public class Thief extends User{
         this.address = builder.address;
         this.numTel = builder.numTel;
         this.ownedVehicle = builder.ownedVehicle;
+        this.vehiclesteal = new ArrayList<>();
+    }
+
+    /**
+     * Return the list of all the vehicle the thief have steal
+     * 
+     * @return the list of all the vehicle the thief have steal
+     */
+    public List<Vehicle> getVehiclesteal(){
+        return this.vehiclesteal;
+    }
+
+    /**
+     * Set a new list of vehicle stealed by the thief
+     * 
+     * @param vehicles the new list of steled vehicle
+     */
+    public void setVehiclesteal(List<Vehicle> vehicles){
+        this.vehiclesteal = vehicles;
     }
 
     /**
