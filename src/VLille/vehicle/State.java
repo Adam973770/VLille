@@ -36,8 +36,23 @@ public abstract class State {
         this.stateDescription = description;
     }
 
+    /**
+     * Represent the state of a vehicle depending on the context, here the vehicle is rented
+     */
     public abstract void rented();
+
+    /**
+     * Represent the state of a vehicle depending on the context, here the vehicle is not rented
+     */
     public abstract void notRented();
+
+    /**
+     * Represent the state of a vehicle depending on the context, here the vehicle is stealed by a thief
+     */
     public abstract void stealed();
+
+    /**
+     * Represent the state of a vehicle depending on the context, here the vehicle is broken and need to be repair
+     */
     public abstract void broken();
 }
