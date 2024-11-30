@@ -1,5 +1,6 @@
 package VLille.user;
 import VLille.vehicle.Bike.*;
+import VLille.vehicle.*;
 
 public class Repairer extends User{
 
@@ -15,7 +16,7 @@ public class Repairer extends User{
         this.gender = builder.gender;
         this.address = builder.address;
         this.numTel = builder.numTel;
-        this.ownedBike = builder.ownedBike;
+        this.ownedVehicle = builder.ownedVehicle;
     }
 
     /**
@@ -31,7 +32,7 @@ public class Repairer extends User{
         private String gender;
         private String address;
         private String numTel;
-        private Bike ownedBike;
+        private Vehicle ownedVehicle; 
 
         /**
          * Sets the first name of the repairer.
@@ -105,8 +106,8 @@ public class Repairer extends User{
          * @param bike The `Bike` object owned by the repairer.
          * @return The current `RepairerBuilder` instance.
          */
-        public RepairerBuilder setOwnedBike(Bike bike) {
-            this.ownedBike = bike;
+        public RepairerBuilder setOwnedVehicle(Vehicle vehicle){
+            this.ownedVehicle = vehicle;
             return this;
         }
 
