@@ -29,17 +29,18 @@ public class Main {
         //station
         ControlCenter controlCenter = ControlCenter.getInstance();
         Station bikeStation = new Station(controlCenter);
+        controlCenter.getAllBikeStation().add(bikeStation);
+        System.out.println(controlCenter.getAllBikeStation());
         bikeStation.dropVehicle(b1);
 
         //action User
         ActionUserlmpl actionUser = new ActionUserlmpl();
-        actionUser.rent(repairer, bikeStation);
-        System.out.println(repairer.getOwnedVehicle());
-        System.out.println(b1.getCurrentRenter());
-        actionUser.drop(repairer, bikeStation);
-        System.out.println(repairer.getOwnedVehicle());
-        System.out.println(b1.getCurrentRenter());
-        System.out.println(b1.toString());
-
+        b1.setIntervaleBeforeSteal(0);
+        actionUser.steal(thief, controlCenter.getAllBikeStation());
+        System.out.println(b1.getState());
+        System.out.println(bikeStation.getAllVehicle());
+        System.out.println(thief.getVehiclesteal());
+        bikeStation.setCapacity(10);
+        System.out.println(bikeStation.getAllVehicle());
     }
 }
