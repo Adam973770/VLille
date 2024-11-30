@@ -79,6 +79,22 @@ public class Station {
     } 
 
     /**
+     * Set the capacity of the station
+     */
+    public void setCapacity(int c) {
+        this.capacity = c;
+        if (this.allVehicle.size() < c) {
+            for (int i = this.allVehicle.size(); i < c; i++) {
+                this.allVehicle.add(null);
+            }
+        } else if (this.allVehicle.size() > c) {
+            for (int i = this.allVehicle.size() - 1; i >= c; i--) {
+                this.allVehicle.remove(i);
+            }
+        }
+    }
+
+    /**
      * Specify if the station is empty or not
      * 
      * @return true if the station is empty else false if the station has at least one vehicle 
