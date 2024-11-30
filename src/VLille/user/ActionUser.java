@@ -53,7 +53,7 @@ public interface ActionUser {
      * Simulates the theft of a vehicle.
      * 
      * @param thief The thief attempting to steal the vehicle.
-     * @param vehicle The vehicle to be stolen.
+     * @param stations The station where the vehicle are.
      */
-    public void steal(Thief thief, Vehicle vehicle);
+    public void steal(Thief thief, List<Station> stations);
 }

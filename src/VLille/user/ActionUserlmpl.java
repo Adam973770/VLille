@@ -32,6 +32,7 @@ public class ActionUserlmpl implements ActionUser{
         try {
             user.ownedVehicle = station.takeVehicle();
             user.ownedVehicle.setCurrentRenter(user);
+            user.ownedVehicle.setIntervaleBeforeSteal(2);
         }
         catch (Exception e) {
             System.out.println("No vehicle available in this station");
@@ -83,9 +84,18 @@ public class ActionUserlmpl implements ActionUser{
      * Simulates the theft of a vehicle.
      * 
      * @param thief The thief attempting to steal the vehicle.
-     * @param vehicle The vehicle to be stolen.
+     * @param stations The station where the vehicle are.
      */
-    public void steal(Thief thief, Vehicle vehicle){
-
+    public void steal(Thief thief, List<Station> stations){
+        for (Station station : stations){
+            for (int i = 0; i < station.getCapacity(); i++){
+                Vehicle vehicle = station.getAllVehicle().get(i);
+                if (vehicle != null && vehicle.getIntervaleBeforeSteal() == 0 && vehicle.getRandom().nextInt(10) <= 5){
+                    vehicle.stealed();
+                    thief.getVehiclesteal().add(vehicle);
+                    station.getAllVehicle().set(i, null);
+                }
+            }
+        }
     }
 }
