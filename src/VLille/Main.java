@@ -27,5 +27,7 @@ public class Main {
         b2 = new Basket(b2);
         b2 = new LuggageRack(b2);
         System.out.println(b2.toString());
+        b2.rented();
+        System.out.println(b2.toString());
     }
 }
