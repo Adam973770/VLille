@@ -8,7 +8,7 @@ import VLille.controlCenter.*;
 /**
  * class for Station
  */
-public abstract class Station implements ControlCenterObserver{
+public class Station {
 
     protected ArrayList<Vehicle> allVehicle;
     protected int capacity;
@@ -21,12 +21,12 @@ public abstract class Station implements ControlCenterObserver{
      * 
      * @param controlCenter The `controlCenter` object in charge of the station
      */
-    public Station(ControlCenter controlCenter){
-        this.allVehicle = new ArrayList<Vehicle>();
+    public Station(ControlCenter controlCenter) {
+        this.random = new Random();
+        this.allVehicle = new ArrayList<>();
         this.capacity = random.nextInt(10) + 10;
         this.controlCenter = controlCenter;
         this.id = "Station " + random.nextInt(10000);
-        this.random = new Random();
 
         for (int i = 0; i < this.capacity; i++) {
             this.allVehicle.add(null);
@@ -38,7 +38,7 @@ public abstract class Station implements ControlCenterObserver{
      * 
      * @return The current list of the vehicle in the station
      */
-    public List<Vehicle> getAllVehicle() {
+    public ArrayList<Vehicle> getAllVehicle() {
         return this.allVehicle;
     }
 
@@ -79,6 +79,22 @@ public abstract class Station implements ControlCenterObserver{
     } 
 
     /**
+     * Set the capacity of the station
+     */
+    public void setCapacity(int c) {
+        this.capacity = c;
+        if (this.allVehicle.size() < c) {
+            for (int i = this.allVehicle.size(); i < c; i++) {
+                this.allVehicle.add(null);
+            }
+        } else if (this.allVehicle.size() > c) {
+            for (int i = this.allVehicle.size() - 1; i >= c; i--) {
+                this.allVehicle.remove(i);
+            }
+        }
+    }
+
+    /**
      * Specify if the station is empty or not
      * 
      * @return true if the station is empty else false if the station has at least one vehicle 
@@ -116,9 +132,14 @@ public abstract class Station implements ControlCenterObserver{
         if (isFull()){
             throw new StationIsFullException("Station is full, cannot drop a vehicle");
         }
-        for (int i = 0; i<this.capacity; i++){
+        for (int i = 0; i < this.capacity; i++){
             if (this.allVehicle.get(i)==null){
-                this.allVehicle.add(v);
+                this.allVehicle.set(i, v);
+                v.notRented();
+                if (v.getNbUsage() == 0){
+                    v.broken();
+                }
+                return;
             }
         }
     }
@@ -134,8 +155,10 @@ public abstract class Station implements ControlCenterObserver{
             throw new StationIsAlreadyEmpty("Station is already empty");
         }
         for (int i = 0; i < this.capacity; i++){
-            if (this.allVehicle.get(i) != null){
+            if (this.allVehicle.get(i) != null && (this.allVehicle.get(i).getNbUsage() > 0)){
                 Vehicle vehicle = this.allVehicle.get(i);
+                vehicle.setNbUsage(vehicle.getNbUsage() - 1);
+                vehicle.rented();
                 this.allVehicle.set(i, null);
                 return vehicle;
             }
@@ -150,7 +173,7 @@ public abstract class Station implements ControlCenterObserver{
      * @return The list of all the vehicle that was in the station
      */
     public List<Vehicle> takeAllVehicle() throws StationIsAlreadyEmpty {
-        if (isFull()){
+        if (isEmpty()){
             throw new StationIsAlreadyEmpty("Station is already empty");
         }
         List<Vehicle> vehicles = new ArrayList<Vehicle>();
@@ -164,10 +187,11 @@ public abstract class Station implements ControlCenterObserver{
         return vehicles;
     }
 
-    public void update(String message) {
-        System.out.println("Station " + this.id + " a reçu la notification : " + message);
-    }
-
+    /**
+    * Returns a string representation of the station, including its ID.
+    * 
+    * @return The identifier of the station.
+    */
     public String toString() {
         return "Station : " + getId();
     }

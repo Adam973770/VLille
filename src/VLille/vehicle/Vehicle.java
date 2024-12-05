@@ -13,6 +13,7 @@ public abstract class Vehicle {
     protected String color;
     protected Random random;
     protected State state;
+    protected int intervaleBeforeSteal;
 
     /**
      * Contructs a new `Vehicle` Object
@@ -24,52 +25,7 @@ public abstract class Vehicle {
         this.random = new Random();
         this.vehicleId = "Vehicle " + random.nextInt(10000);
         this.state = new NotRentedState(this);
-    }
-
-    /**
-     * change the state of the bike to Rented
-     */
-    public void rented(){
-        state.rented();
-    }
-
-    /**
-     * change the state of the bike to Not rented
-     */
-    public void notRented(){    
-        state.notRented();
-    }
-
-    /**
-     * change the state of the bike to Stealed
-     */
-    public void stealed(){
-        state.stealed();
-    }
-
-    /**
-     * change the state of the bike to Broken
-     */
-    public void broken(){
-        state.broken();
-    }
-
-    /**
-     * change the state of the vehicle
-     * 
-     * @param state The state of the vehicle
-     */
-    public void setState(State state) {
-        this.state = state;
-    }
-
-    /**
-     * return the description of the vehicle state
-     * 
-     * @return the actual state description of the vehicle
-     */
-    public String getState(){
-        return this.state.getStateDescription();
+        this.intervaleBeforeSteal = 2;
     }
 
     /**
@@ -99,12 +55,57 @@ public abstract class Vehicle {
         return this.nbUsage;
     }
 
+        /**
+     * Return the current renter of the vehicle 
+     * 
+     * @return The current renter of the vehicle 
+     */
+    public User getCurrentRenter(){
+        return this.currentRenter;
+    }
+
+    /**
+     * Return the color of the vehicle 
+     * 
+     * @return The current color of the vehicle
+     */
+    public String getColor(){
+        return this.color;
+    }
+
+    /**
+     * Return the attribute random of the vehicle 
+     * 
+     * @return The current attribute random of the vehicle
+     */
+    public Random getRandom(){
+        return this.random;
+    }
+
+    /**
+     * return the description of the vehicle state
+     * 
+     * @return the actual state description of the vehicle
+     */
+    public String getState(){
+        return this.state.getStateDescription();
+    }
+
+    /**
+     * Return the intervale remaining before a vehicle can be steal
+     * 
+     * @return the intervale remaining before a vehicle can be steal
+     */
+    public int getIntervaleBeforeSteal(){
+        return this.intervaleBeforeSteal;
+    }
+
     /**
      * Set the libelle of the vehicle
      * 
      * @param l The libelle of the vehicle
      */
-    protected void setLibelle(String l){
+    public void setLibelle(String l){
         this.libelle = l;
     }
 
@@ -113,7 +114,7 @@ public abstract class Vehicle {
      * 
      * @param id The Id of the vehicle
      */
-    protected void setVehicleId(String id){
+    public void setVehicleId(String id){
         this.vehicleId = id;
     }
 
@@ -122,8 +123,72 @@ public abstract class Vehicle {
      * 
      * @param u The current number of usage of the vehicle
      */
-    protected void setNbUsage(int u){
+    public void setNbUsage(int u){
         this.nbUsage = u;
+    }
+
+    /**
+     * Set the owner of a vehicle
+     * 
+     * @param user The current owner of the vehicle
+     */
+    public void setCurrentRenter(User user){
+        this.currentRenter = user;
+    }
+
+    /**
+     * Set the color of a vehicle
+     * 
+     * @param color The current color of the vehicle
+     */
+    public void setColor (String color){
+        this.color = color;
+    }
+
+    /**
+     * change the state of the vehicle
+     * 
+     * @param state The state of the vehicle
+     */
+    public void setState(State state) {
+        this.state = state;
+    }
+
+    /**
+     * change the interval remaining before a vehicle can be steal
+     * 
+     * @param state the new interval
+     */
+    public void setIntervaleBeforeSteal(int inter){
+        this.intervaleBeforeSteal = inter;
+    }
+
+    /**
+     * change the state of the bike to Rented
+     */
+    public void rented(){
+        state.rented();
+    }
+
+    /**
+     * change the state of the bike to Not rented
+     */
+    public void notRented(){    
+        state.notRented();
+    }
+
+    /**
+     * change the state of the bike to Stealed
+     */
+    public void stealed(){
+        state.stealed();
+    }
+
+    /**
+     * change the state of the bike to Broken
+     */
+    public void broken(){
+        state.broken();
     }
 
     /**
