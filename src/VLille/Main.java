@@ -25,12 +25,9 @@ public class Main {
         Bike b2 = new ElectricBike();
         b2 = new Basket(b2);
         b2 = new LuggageRack(b2);
-<<<<<<< HEAD
         System.out.println(b2.toString());
         b2.rented();
         System.out.println(b2.toString());
-=======
-
         //station
         ControlCenter controlCenter = ControlCenter.getInstance();
         Station bikeStation = new Station(controlCenter);
@@ -39,7 +36,7 @@ public class Main {
         bikeStation.dropVehicle(b1);
 
         //action User
-        ActionUserlmpl actionUser = new ActionUserlmpl();
+        ActionUser actionUser = new ActionUserlmpl();
         b1.setIntervaleBeforeSteal(0);
         actionUser.steal(thief, controlCenter.getAllBikeStation());
         System.out.println(b1.getState());
@@ -47,6 +44,5 @@ public class Main {
         System.out.println(thief.getVehiclesteal());
         bikeStation.setCapacity(10);
         System.out.println(bikeStation.getAllVehicle());
->>>>>>> refs/remotes/origin/main
     }
 }
