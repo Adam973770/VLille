@@ -14,6 +14,7 @@
 3. Le fichier **UML Projet VeLib.mdj** est l'Uml du projet
 4. Le fichier **UML.svg** est l'Uml du projet mais en format svg
 5. Le fichier **UML.pdf** est l'Uml du projet mais en format pdf
+6. Le fichier **Makefile** est un makefile
 
 ## UML
 
@@ -45,18 +46,17 @@
     - La classe **ControlCenter** représente le centre de controle de la ville qui se charger de superviser l’ensemble de la flotte de vélos et des stations, elle est impementé en utilisant le pattern Singleton
 
 ## Pattern utilisé (justification de leur utilisation) :
-- Singleton : Sur la classe ControlCenter car dans mon projet je veut avoir que un seul et unique centre de controle
-- Decorator : Sur la Bike, j'aurais aussi pu utiliser ce pattern sur la Vehicle, mais préféré le faire sur la classe Bike. 
-- Factory Method : Je l'ai utilisé sur la classe Station car on pourrais peut être rajouter d'autre type de station autre que des BikeStation.
-- Builder : sur les User car un objet user possede beaucoup de caractéristiques, donc j'utilise le pattern builder pour simplifier le création d'un objet de type User
-- Observer : Sur la classe ControlCenter pour pouvoir recevoir ce que l'on vas appeler des notifications pour que le centre de controle informe des ajouts de station ou des ajouts de vehicle
-- State : implementation du pattern State pour représenter les différents états des objets Vehicle (Broken, Rented, Not rented, Stealed)
+- **Singleton** : Sur la classe ControlCenter car dans mon projet je veut avoir que un seul et unique centre de controle
+- **Decorator** : Sur la Bike, j'aurais aussi pu utiliser ce pattern sur la Vehicle, mais préféré le faire sur la classe Bike. 
+- **Factory Method** : Je l'ai utilisé sur la classe Station car on pourrais peut être rajouter d'autre type de station autre que des BikeStation.
+- **Builder** : sur les User car un objet user possede beaucoup de caractéristiques, donc j'utilise le pattern builder pour simplifier le création d'un objet de type User
+- **State** : implementation du pattern State pour représenter les différents états des objets Vehicle (Broken, Rented, Not rented, Stealed)
+- **Strategy** : 
 
-# Commande de compilation (depuis le dossier VLille):
-## Linux
-```javac -d ../class $(find . -name "*.java")```
-Main : ```java -cp ../class VLille.Main```
-## Windows
+# Commande de compilation (depuis la source du projet):
+Pour compiler tout les fichier : ```make```, les fichiers compilés se trouvent dans le fichier **class**
+
+Pour lancer le **Main** : ```make run```
 
 ## Déroulement du projet : 
 ### Semaine 1 :
@@ -70,7 +70,7 @@ Décision de quel pattern vont être utilisé lors du projet :
     - pattern Builder pour les User
     - pattern Factory pour les Station
     - pattenr Decorator pour les Vehicle
-    - pattern Singleton ou Factory pour le ControlCenter
+    - pattern Singleton pour le ControlCenter
 
 Implemention de certaines classes avec cette fois-ci l'utilisation des pattern : User, Painter, Repairer, Renter
 
@@ -83,6 +83,13 @@ Implemention de certaines classes avec cette fois-ci l'utilisation des pattern :
 Debut de l'implementation de ControlCenter avec le pattern Observer et ajout d'un état dans un Vehicle pour savoir si le vehicule est disponible ou non 
 
 ### Semaine 5 :
-Implementation compléte du pattern State sur les Vehicle ainsi que son ajout dans l'UML
+Décision de quels patterns vont être ajoutés dans le projet :
+
+    - pattern Strategy pour l'algorithme de distribution du ControlCenter
+    - pattern State sur la classe State représentant le statut/état d'un Vehicle
+
+Implementation compléte du pattern State sur les Vehicle ainsi que son ajout dans l'UML, ainsi que l'implementation des méthodes qui permettent des louer un Vehicle depuis une station et de déposer un Vehicle dans une station, pour pouvoir les appeler dans les Actions des User.
 
 ### Semaine 6 :
+Implementation des actions des User, ainsi que début de l'implementation de l'algorithme de distribution via le pattern Strategy, et fin de l'UML.
+Implementation des tests du projet et du Main.
