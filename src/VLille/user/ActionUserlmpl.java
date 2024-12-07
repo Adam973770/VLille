@@ -1,13 +1,13 @@
-package VLille.user;
-import VLille.*;
-import VLille.Station.*;
+package src.VLille.user;
+import src.VLille.*;
+import src.VLille.Station.*;
 import java.util.*;
-import VLille.vehicle.*;
-import VLille.user.*;
-import VLille.controlCenter.*;
-import VLille.vehicle.Bike.*;
-import VLille.vehicle.Bike.equipment.*;
-import VLille.Exceptions.*;
+import src.VLille.vehicle.*;
+import src.VLille.user.*;
+import src.VLille.controlCenter.*;
+import src.VLille.vehicle.Bike.*;
+import src.VLille.vehicle.Bike.equipment.*;
+import src.VLille.Exceptions.*;
 
 /**
  * Implementation of the ActionUser interface, providing concrete operations for user actions like renting, dropping off, repairing, painting, and stealing vehicles

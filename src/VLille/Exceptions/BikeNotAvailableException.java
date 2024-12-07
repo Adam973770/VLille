@@ -1,4 +1,4 @@
-package VLille.Exceptions;
+package src.VLille.Exceptions;
 
 public class BikeNotAvailableException extends Exception {
     

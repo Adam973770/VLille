@@ -1,4 +1,4 @@
-package VLille.vehicle;
+package src.VLille.vehicle;
 
 /**
  * State of a vehicle which change depending on the context

@@ -1,4 +1,4 @@
-package VLille.Exceptions;
+package src.VLille.Exceptions;
 
 public class StationIsAlreadyEmpty extends Exception {
     

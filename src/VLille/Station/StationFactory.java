@@ -1,10 +1,10 @@
-package VLille.Station;
+package src.VLille.Station;
 
 import java.util.*;
-import VLille.vehicle.Bike.*;
-import VLille.vehicle.*;
-import VLille.Exceptions.*;
-import VLille.controlCenter.*;
+import src.VLille.vehicle.Bike.*;
+import src.VLille.vehicle.*;
+import src.VLille.Exceptions.*;
+import src.VLille.controlCenter.*;
 
 public interface StationFactory {
 

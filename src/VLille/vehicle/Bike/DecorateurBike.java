@@ -1,5 +1,5 @@
-package VLille.vehicle.Bike;
-import VLille.vehicle.*;
+package src.VLille.vehicle.Bike;
+import src.VLille.vehicle.*;
 
 /**
  * Abstract class for `DecorateurBike`, representing a decorator for an Object Bike, allowing modifications to a Bike object

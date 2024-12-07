@@ -1,6 +1,6 @@
-package VLille.user;
-import VLille.vehicle.Bike.*;
-import VLille.vehicle.*;
+package src.VLille.user;
+import src.VLille.vehicle.Bike.*;
+import src.VLille.vehicle.*;
 import java.util.*;
 
 public class Thief extends User{

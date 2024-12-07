@@ -1,8 +1,8 @@
-package VLille.controlCenter;
-import VLille.Station.*;
+package src.VLille.controlCenter;
+import src.VLille.Station.*;
 import java.util.*;
-import VLille.vehicle.*;
-import VLille.user.*;
+import src.VLille.vehicle.*;
+import src.VLille.user.*;
 /**
  * class for ControlCenter
  */

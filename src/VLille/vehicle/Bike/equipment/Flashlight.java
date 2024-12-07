@@ -5,9 +5,9 @@
  * The `Flashlight` class extends `DecorateurBike`, which allows it to "decorate" or enhance a `Bike` object
  * by adding new behavior while keeping the core functionality of the bike intact.
  */
-package VLille.vehicle.Bike.equipment;
-import VLille.vehicle.*;
-import VLille.vehicle.Bike.*;
+package src.VLille.vehicle.Bike.equipment;
+import src.VLille.vehicle.*;
+import src.VLille.vehicle.Bike.*;
 
 /**
  * The `Flashlight` class is a decorator for the `Bike` class

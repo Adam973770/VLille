@@ -1,5 +1,5 @@
-package VLille.vehicle;
-import VLille.user.*;
+package src.VLille.vehicle;
+import src.VLille.user.*;
 import java.util.*;
 /**
  * Class for Vehicle

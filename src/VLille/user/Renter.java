@@ -1,6 +1,6 @@
-package VLille.user;
-import VLille.vehicle.Bike.*;
-import VLille.vehicle.*;
+package src.VLille.user;
+import src.VLille.vehicle.Bike.*;
+import src.VLille.vehicle.*;
 
 public class Renter extends User{
 

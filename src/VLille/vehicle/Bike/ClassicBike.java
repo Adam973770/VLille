@@ -1,5 +1,5 @@
-package VLille.vehicle.Bike;
-import VLille.vehicle.*;
+package src.VLille.vehicle.Bike;
+import src.VLille.vehicle.*;
 
 /**
  * class for `ClassicBike` Object

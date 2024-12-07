@@ -1,14 +1,14 @@
-package VLille.controlCenter;
+package src.VLille.controlCenter;
 
-import VLille.*;
-import VLille.Station.*;
+import src.VLille.*;
+import src.VLille.Station.*;
 import java.util.*;
-import VLille.vehicle.*;
-import VLille.user.*;
-import VLille.controlCenter.*;
-import VLille.vehicle.Bike.*;
-import VLille.vehicle.Bike.equipment.*;
-import VLille.Exceptions.*;
+import src.VLille.vehicle.*;
+import src.VLille.user.*;
+import src.VLille.controlCenter.*;
+import src.VLille.vehicle.Bike.*;
+import src.VLille.vehicle.Bike.equipment.*;
+import src.VLille.Exceptions.*;
 
 public class DistributionStrategylmpl implements DistributionStrategy {
     public DistributionStrategylmpl (){
