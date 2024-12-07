@@ -1,6 +1,6 @@
 classes:
 	mkdir -p class
-	javac -cp junit-platform-console-standalone-1.9.3.jar -d class src/VLille/Main.java src/VLille/controlCenter/*.java src/VLille/Exceptions/*.java src/VLille/Station/*.java src/VLille/user/*.java src/VLille/vehicle/*.java src/VLille/vehicle/Bike/*.java src/VLille/vehicle/Bike/equipment/*.java test/VLille/vehicle/StateTest.java
+	javac -cp junit-platform-console-standalone-1.9.3.jar -d class src/VLille/Main.java src/VLille/controlCenter/*.java src/VLille/Exceptions/*.java src/VLille/Station/*.java src/VLille/user/*.java src/VLille/vehicle/*.java src/VLille/vehicle/Bike/*.java src/VLille/vehicle/Bike/equipment/*.java test/VLille/vehicle/*.java
 
 all: 
 	make clean
