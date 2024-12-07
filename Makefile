@@ -1,30 +1,16 @@
-SRC_DIR = src
-CLASS_DIR = class
+classes:
+	mkdir -p class
+	javac -cp junit-platform-console-standalone-1.9.3.jar -d class src/VLille/Main.java src/VLille/controlCenter/*.java src/VLille/Exceptions/*.java src/VLille/Station/*.java src/VLille/user/*.java src/VLille/vehicle/*.java src/VLille/vehicle/Bike/*.java src/VLille/vehicle/Bike/equipment/*.java test/VLille/vehicle/StateTest.java
 
-# Trouver tous les fichiers source .java
-SOURCES = $(shell find $(SRC_DIR) -name "*.java")
+all: 
+	make clean
+	make classes
 
-# Commande pour le compilateur Java
-JAVAC = javac
-
-# Options pour le compilateur
-JAVAC_FLAGS = -d $(CLASS_DIR)
-
-# Nom du package principal et classe principale
-MAIN_CLASS = VLille.Main
-
-# Cible par défaut : compiler le projet si nécessaire
-all: $(CLASS_DIR)
-	$(JAVAC) $(JAVAC_FLAGS) $(SOURCES)
-
-# Créer le répertoire class s'il n'existe pas
-$(CLASS_DIR):
-	mkdir -p $(CLASS_DIR)
-
-# Nettoyer les fichiers compilés
 clean:
-	rm -rf $(CLASS_DIR)
+	rm -rf class
 
-# Exécuter le programme (sans recompiler systématiquement)
 run:
-	java -cp $(CLASS_DIR) $(MAIN_CLASS)
+	java -classpath class src.VLille.Main
+
+test: classes
+	java -jar junit-platform-console-standalone-1.9.3.jar --class-path class --scan-class-path
