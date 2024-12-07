@@ -25,6 +25,7 @@ public class RentedState extends State{
      * create a new state for the vehicle representing a not rented state
      */
     public void notRented(){
+        setStateDescription("Not rented");
         this.vehicle.setState(new NotRentedState(this.vehicle));
     }
 
@@ -32,6 +33,7 @@ public class RentedState extends State{
      * create a new state for the vehicle representing a stealed state
      */
     public void stealed(){
+        setStateDescription("Stealed");
         this.vehicle.setState(new StealedState(this.vehicle));
     }
 
@@ -39,6 +41,7 @@ public class RentedState extends State{
      * create a new state for the vehicle representing a broken state
      */
     public void broken(){
+        setStateDescription("Broken");
         this.vehicle.setState(new BrokenState(this.vehicle));
     }
 }

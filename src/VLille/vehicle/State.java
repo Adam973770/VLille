@@ -37,6 +37,15 @@ public abstract class State {
     }
 
     /**
+     * set a new Vehicle Object to the state
+     * 
+     * @param v the new Vehicle
+     */
+    public void setVehicle(Vehicle v){
+        this.vehicle = v;
+    }
+
+    /**
      * Represent the state of a vehicle depending on the context, here the vehicle is rented
      */
     public abstract void rented();
