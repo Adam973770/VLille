@@ -1,4 +1,4 @@
-package test.VLille.vehicle;
+package test.VLille.vehicle.Bike;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
@@ -9,7 +9,7 @@ import src.VLille.vehicle.Bike.*;
 public class ClassicBikeTest extends BikeTest {
 
     @Override
-    protected Vehicle createVehicle(){
+    public Vehicle createVehicle(){
         return new ClassicBike();
     }
 }
