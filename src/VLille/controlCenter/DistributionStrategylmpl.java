@@ -34,7 +34,7 @@ public class DistributionStrategylmpl implements DistributionStrategy {
         for (Station station : stations){
             try{
                 allVehicle.addAll(station.takeAllVehicle());
-            }catch(StationIsAlreadyEmpty) {
+            }catch(StationIsAlreadyEmpty e) {
                 //Silent the exception
             }
         }

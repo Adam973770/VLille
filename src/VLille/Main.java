@@ -11,6 +11,7 @@ import src.VLille.Exceptions.*;
 
 public class Main {
     public static void main(String [] args) throws StationIsAlreadyEmpty, StationIsFullException{
+        /** 
         //user
         Painter painter = new Painter.PainterBuilder().setFirstName("Jeanne").setGender("Femme").build();
         Renter renter = new Renter.RenterBuilder().setFirstName("Theo").setGender("Homme").build();
@@ -44,5 +45,7 @@ public class Main {
         System.out.println(thief.getVehiclesteal());
         bikeStation.setCapacity(10);
         System.out.println(bikeStation.getAllVehicle());
+        */
+        
     }
 }
