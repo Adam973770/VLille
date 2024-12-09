@@ -10,6 +10,14 @@ import src.VLille.vehicle.Bike.*;
 import src.VLille.vehicle.Bike.equipment.*;
 import src.VLille.Exceptions.*;
 
+/**
+ * DistributionStrategy define how the Vehicle Object gonna be distributed in the station of the system
+ */
 public interface DistributionStrategy {
-    public void distribution(List<Station> stations);
+    /**
+     * Distribute all the vehicle in the system from all the station
+     * 
+     * @param stations the list of all the station in the system
+     */
+    public void distribution(List<Station> stations) throws StationIsAlreadyEmpty, StationIsFullException;
 } 
