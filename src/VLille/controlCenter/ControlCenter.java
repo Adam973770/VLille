@@ -7,12 +7,13 @@ import src.VLille.user.*;
  * class for ControlCenter
  */
 public class ControlCenter{
-
+    /** The unique instance of ControlCenter */
     private static ControlCenter uniqueInstance;
 
     private ArrayList<Station> allStation;
     private Map<User, Vehicle> allNotAvailableVehicles;
-    private ArrayList<ControlCenterObserver> observers; 
+    private ArrayList<ControlCenterObserver> observers;
+    private DistributionStrategy strategy; 
 
     /**
      * Constructs a new `ControlCenter` Object
@@ -21,6 +22,7 @@ public class ControlCenter{
         this.allStation = new ArrayList<Station>();
         this.allNotAvailableVehicles = new HashMap<User, Vehicle>();
         this.observers = new ArrayList<>();
+        this.strategy = new DistributionStrategylmpl();
     }
 
     public static ControlCenter getInstance(){
@@ -28,6 +30,15 @@ public class ControlCenter{
             uniqueInstance = new ControlCenter();
         }
         return uniqueInstance;
+    }
+
+    /**
+     * Changes the distribution strategy
+     * 
+     * @param strat the new DistributionStrategy
+     */
+    public void setStrategy(DistributionStrategy strat){
+        this.strategy = strat;
     }
 
     /**
