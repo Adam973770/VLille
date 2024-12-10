@@ -29,6 +29,9 @@ public class ActionUserlmpl implements ActionUser{
      * @throws StationIsAlreadyEmpty if the station has no vehicle to rent
      */
     public void rent(User user, Station station) throws StationIsAlreadyEmpty {
+        if (user.getOwnedVehicle() != null){
+            return;
+        }
         try {
             user.ownedVehicle = station.takeVehicle();
             user.ownedVehicle.setCurrentRenter(user);
@@ -46,6 +49,9 @@ public class ActionUserlmpl implements ActionUser{
      * @throws StationIsFullException if the station has no slot to drop the vehicle
      */
     public void drop(User user, Station station) throws StationIsFullException{
+        if (user.ownedVehicle == null){
+            return;
+        }
         try{
             station.dropVehicle(user.getOwnedVehicle());
             user.ownedVehicle.setCurrentRenter(null);
