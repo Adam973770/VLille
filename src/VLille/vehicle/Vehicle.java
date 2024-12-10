@@ -125,6 +125,9 @@ public abstract class Vehicle {
      */
     public void setNbUsage(int u){
         this.nbUsage = u;
+        if(u <= 0){
+            this.state = new BrokenState(this);
+        }
     }
 
     /**
