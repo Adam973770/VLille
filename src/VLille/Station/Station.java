@@ -136,7 +136,7 @@ public class Station {
             if (this.allVehicle.get(i)==null){
                 this.allVehicle.set(i, v);
                 v.notRented();
-                if (v.getNbUsage() == 0){
+                if (v.getNbUsage() <= 0){
                     v.broken();
                 }
                 return;
@@ -163,6 +163,7 @@ public class Station {
                 return vehicle;
             }
         }
+        System.out.println("No vehicle available in this station");
         return null;
     }
 
