@@ -13,35 +13,4 @@ public class RentedState extends State{
         super(vehicle);
         this.stateDescription = "Rented";
     }
-
-    /**
-     * explain that the vehicle is already rented
-     */
-    public void rented(){
-        System.out.println("Already rented");
-    }
-
-    /**
-     * create a new state for the vehicle representing a not rented state
-     */
-    public void notRented(){
-        setStateDescription("Not rented");
-        this.vehicle.setState(new NotRentedState(this.vehicle));
-    }
-
-    /**
-     * create a new state for the vehicle representing a stealed state
-     */
-    public void stealed(){
-        setStateDescription("Stealed");
-        this.vehicle.setState(new StealedState(this.vehicle));
-    }
-
-    /**
-     * create a new state for the vehicle representing a broken state
-     */
-    public void broken(){
-        setStateDescription("Broken");
-        this.vehicle.setState(new BrokenState(this.vehicle));
-    }
 }

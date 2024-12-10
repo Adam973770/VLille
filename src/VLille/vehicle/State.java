@@ -46,22 +46,35 @@ public abstract class State {
     }
 
     /**
-     * Represent the state of a vehicle depending on the context, here the vehicle is rented
+     * create a new state for the vehicle representing a rented state
      */
-    public abstract void rented();
+    public void rented(){
+        setStateDescription("Rented");
+        this.vehicle.setState(new RentedState(this.vehicle));
+    }
 
     /**
-     * Represent the state of a vehicle depending on the context, here the vehicle is not rented
+     * create a new state for the vehicle representing a not rented state
      */
-    public abstract void notRented();
+    public void notRented(){
+        setStateDescription("Not rented");
+        this.vehicle.setState(new NotRentedState(this.vehicle));
+    }
 
     /**
-     * Represent the state of a vehicle depending on the context, here the vehicle is stealed by a thief
+     * create a new state for the vehicle representing a stealed state
      */
-    public abstract void stealed();
+    public void stealed(){
+        setStateDescription("Stealed");
+        this.vehicle.setState(new StealedState(this.vehicle));
+    }
+
 
     /**
-     * Represent the state of a vehicle depending on the context, here the vehicle is broken and need to be repair
+     * create a new state for the vehicle representing a broken state
      */
-    public abstract void broken();
+    public void broken(){
+        setStateDescription("Broken");
+        this.vehicle.setState(new BrokenState(this.vehicle));
+    }
 }
