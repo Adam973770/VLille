@@ -29,6 +29,6 @@ public class Flashlight extends DecorateurBike {
      * @return A string representing the bike's label, which now includes "+ Flashlight".
      */
     public String getLibelle() {
-        return bike.getLibelle() + "+ Flashlight ";
+        return super.getLibelle() + "+ Flashlight ";
     }
 }

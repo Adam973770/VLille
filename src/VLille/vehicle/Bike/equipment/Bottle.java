@@ -21,13 +21,13 @@ public class Bottle extends DecorateurBike {
         bike = b;
     }
 
+    @Override
     /**
      * Returns the label (libelle) of the bike with the added information about the bottle.
      * 
      * @return A string representing the bike's label, which now includes "+ Bottle".
      */
-    @Override
     public String getLibelle() {
-        return bike.getLibelle() + "+ Bottle ";
+        return super.getLibelle() + "+ Bottle ";
     }
 }

@@ -29,6 +29,6 @@ public class LuggageRack extends DecorateurBike {
      * @return A string representing the bike's label, which now includes "+ LuggageRack".
      */
     public String getLibelle() {
-        return bike.getLibelle() + "+ LuggageRack ";
+        return super.getLibelle() + "+ LuggageRack ";
     }
 }
