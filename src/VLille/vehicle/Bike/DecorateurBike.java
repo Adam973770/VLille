@@ -16,5 +16,7 @@ public abstract class DecorateurBike extends Bike {
      * 
      * @return The current label of a bike
      */
-    public abstract String getLibelle();
+    public String getLibelle(){
+        return bike.getLibelle();
+    }
 }
