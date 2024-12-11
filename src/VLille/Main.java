@@ -23,6 +23,12 @@ public class Main {
         b1 = new Basket(b1);
         b1 = new Bottle(b1);
 
+        //Factory
+        ElectricBikeFactory electricBikeFactory = new ElectricBikeFactory();
+        Bike bike1 = electricBikeFactory.createBike();
+        ClassicBikeFactory classicBikeFactory = new ClassicBikeFactory();
+        Bike bike2 = classicFactory.createBike();
+
         Bike b2 = new ElectricBike();
         b2 = new Basket(b2);
         b2 = new LuggageRack(b2);
@@ -46,6 +52,18 @@ public class Main {
         bikeStation.setCapacity(10);
         System.out.println(bikeStation.getAllVehicle());
         */
-        
+        ElectricBikeFactory electricBikeFactory = new ElectricBikeFactory();
+        Bike bike1 = electricBikeFactory.createBike();
+        ClassicBikeFactory classicBikeFactory = new ClassicBikeFactory();
+        Bike bike2 = classicBikeFactory.createBike();
+        Painter painter = new Painter.PainterBuilder().setFirstName("Jeanne").setGender("Femme").build();
+        Renter renter = new Renter.RenterBuilder().setFirstName("Theo").setGender("Homme").build();
+        Repairer repairer = new Repairer.RepairerBuilder().setFirstName("Theophane").setGender("Homme").build();
+        Thief thief = new Thief.ThiefBuilder().setFirstName("Leo").setGender("Homme").build();
+        ControlCenter controlCenter = ControlCenter.getInstance();
+        Station bikeStation = new Station(controlCenter);
+        controlCenter.addStation(bikeStation);
+        bikeStation.dropVehicle(bike1);
+
     }
 }
