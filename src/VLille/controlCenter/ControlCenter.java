@@ -6,7 +6,7 @@ import src.VLille.user.*;
 /**
  * class for ControlCenter
  */
-public class ControlCenter{
+public class ControlCenter implements StationObserver{
     /** The unique instance of ControlCenter */
     private static ControlCenter uniqueInstance;
 
@@ -53,6 +53,7 @@ public class ControlCenter{
      */
     public void addStation(Station station){
         this.allStation.add(station);
+        station.addStationObserver(this);
         System.out.println(station.toString() + " a été ajouté au centre de controle");
     }
 
@@ -63,6 +64,26 @@ public class ControlCenter{
      */
     public void removeStation(Station station){
         this.allStation.remove(station);
+        station.removeStationObserver(this);
         System.out.println(station.toString() + " a été supprimé du centre de controle");
+    }
+
+    /**
+     * This method is use to know which event has been create
+     * 
+     * @param station the station from all the event react
+     * @param event the event created
+     * @param vehicle the vehicle take or drop from the station
+     */
+    @Override
+    public void update(Station station, String event, Vehicle vehicle){
+        switch (event) {
+            case "Vehicle has been take":
+                System.out.println("ControlCenter : A vehicle has been taked in " + station.getId());
+                break;
+            case  "Vehicle has been drop":
+                System.out.println("ControlCenter : A vehicle has been droped in " + station.getId());
+                break;
+        }
     }
 }
