@@ -15,6 +15,7 @@ public class Station {
     protected ControlCenter controlCenter;
     protected String id;
     protected Random random;
+    protected List<StationObserver> observers;
 
     /**
      * Constructs a new `Station` Object
@@ -27,10 +28,20 @@ public class Station {
         this.capacity = random.nextInt(10) + 10;
         this.controlCenter = controlCenter;
         this.id = "Station " + random.nextInt(10000);
+        this.observers = new ArrayList<>();
 
         for (int i = 0; i < this.capacity; i++) {
             this.allVehicle.add(null);
         }
+    }
+
+    /**
+     * Return the list of all the observers of this station
+     * 
+     * @return the list of all the observers of this station
+     */
+    public List<StationObserver> getStationObservers(){
+        return this.observers;
     }
 
     /**
@@ -139,6 +150,7 @@ public class Station {
                 if (v.getNbUsage() <= 0){
                     v.broken();
                 }
+                notifyStationObservers("Vehicle has been drop", v);
                 return;
             }
         }
@@ -160,6 +172,7 @@ public class Station {
                 vehicle.setNbUsage(vehicle.getNbUsage() - 1);
                 vehicle.rented();
                 this.allVehicle.set(i, null);
+                notifyStationObservers("Vehicle has been take", vehicle);
                 return vehicle;
             }
         }
@@ -186,6 +199,35 @@ public class Station {
             }
         }
         return vehicles;
+    }
+
+    /**
+     * add a new observer to observe the station
+     * 
+     * @param observer the new StationObserver 
+     */
+    public void addStationObserver(StationObserver observer) {
+        this.observers.add(observer);
+    }
+
+    /**
+     * remove an observer that was observing the station
+     * 
+     * @param observer the StationObserver being remove
+     */
+    public void removeStationObserver(StationObserver observer) {
+        this.observers.remove(observer);
+    }
+    /**
+     * notify all the observer that observe this station for a specific event
+     * 
+     * @param event the event that gonna be notfy
+     * @param vehicle the cause of the event
+     */
+    private void notifyStationObservers(String event, Vehicle vehicle) {
+        for (StationObserver observer : observers) {
+            observer.update(this, event, vehicle);
+        }
     }
 
     /**
