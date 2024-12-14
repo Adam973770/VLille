@@ -100,6 +100,7 @@ public class ActionUserlmpl implements ActionUser{
                     vehicle.stealed();
                     thief.getVehiclesteal().add(vehicle);
                     station.getAllVehicle().set(i, null);
+                    System.out.println("Le voleur a volé le vehicule : " + vehicle.toString());
                 }
             }
         }
