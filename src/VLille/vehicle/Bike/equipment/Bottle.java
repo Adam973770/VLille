@@ -10,6 +10,9 @@ package src.VLille.vehicle.Bike.equipment;
 import src.VLille.vehicle.*;
 import src.VLille.vehicle.Bike.*;
 
+/**
+ * The `Bottle` class is a decorator for the `Bike` class
+ */
 public class Bottle extends DecorateurBike {
 
     /**

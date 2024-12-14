@@ -1,7 +1,7 @@
 package src.VLille.vehicle;
 
 /**
- * State of a vehicle which represent the context not rented
+ * State of a vehicle which represent the context rented
  */
 public class RentedState extends State{
     /**

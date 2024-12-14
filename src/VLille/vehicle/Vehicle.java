@@ -5,14 +5,23 @@ import java.util.*;
  * Class for Vehicle
  */
 public abstract class Vehicle {
+    /** Initialize the limit of usage a vehicle */
     public static final int LIMIT_OF_USAGE = 5;
+    /** The libelle of a vehicle */
     protected String libelle;
+    /** The id of a Vehicle */
     protected String vehicleId;
-    protected int nbUsage; //nombre d'usage restant avant que le vehicule ne casse
+    /** The current number of usage remaining if the vehicle */
+    protected int nbUsage;
+    /** The current owner/renter of the vehicle */
     protected User currentRenter;
+    /** The color of the vehicle */
     protected String color;
+    /** A Random Object use to create a random Id for the vehicle */
     protected Random random;
+    /** The actual state of the vehicle */
     protected State state;
+    /** The intervale remaining before a Thief can steal this Vehicle */
     protected int intervaleBeforeSteal;
 
     /**
@@ -160,7 +169,7 @@ public abstract class Vehicle {
     /**
      * change the interval remaining before a vehicle can be steal
      * 
-     * @param state the new interval
+     * @param inter the new interval
      */
     public void setIntervaleBeforeSteal(int inter){
         this.intervaleBeforeSteal = inter;

@@ -4,8 +4,9 @@ package src.VLille.vehicle;
  * State of a vehicle which change depending on the context
  */
 public abstract class State {
-
+    /** The vehicle that the state gonna represente */
     protected Vehicle vehicle;
+    /** The description of the state */
     protected String stateDescription;
 
     /**
