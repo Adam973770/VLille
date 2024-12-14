@@ -24,7 +24,8 @@ public class DistributionStrategylmpl implements DistributionStrategy {
 
     @Override
     /**
-     * Distribute all the vehicle in the system from all the station in each station
+     * Distribute all the vehicle in the system from all the station in each station, this method collects all vehicles from the given list of stations and redistributes them 
+     * one by one, station by station, in a round-robin manne
      * 
      * @param stations the list of all the station in the system
      * @throws StationIsAlreadyEmpty if a station is already empty and no vehicles can be taked from it
