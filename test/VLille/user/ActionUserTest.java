@@ -9,6 +9,7 @@ import src.VLille.Station.*;
 import src.VLille.Exceptions.*;
 import src.VLille.controlCenter.*;
 import src.VLille.user.*;
+import java.util.*;
 
 public class ActionUserTest {
 
@@ -36,7 +37,7 @@ public class ActionUserTest {
         this.station.dropVehicle(this.bike1);
         this.station.dropVehicle(this.bike2);
         this.station.count = 0;
-        this.action = new ActionUserlmpl();
+        this.action = new MockActionUser();
     }
 
     @Test
@@ -93,8 +94,11 @@ public class ActionUserTest {
     }
 
     @Test
-    public void thiefStealAVehicleInAStation(){
-        
+    public void thiefStealAVehicleInAStation() throws StationIsAlreadyEmpty, StationIsFullException{
+        this.bike1.setIntervaleBeforeSteal(0);
+        action.steal(this.thief, this.controlCenter.getAllBikeStation());
+        assertTrue(this.thief.getVehiclesteal().contains(this.bike1));
+        assertEquals(this.bike1.getState(), "Stealed");
     }
 
     public class MockStation extends Station{
@@ -119,6 +123,26 @@ public class ActionUserTest {
         public Vehicle takeVehicle() throws StationIsAlreadyEmpty{
             this.count++;
             return super.takeVehicle();
+        }
+    }
+
+    public class MockActionUser extends ActionUserlmpl{
+        public MockActionUser(){
+            super();
+        }
+        
+        @Override
+        public void steal(Thief thief, List<Station> stations){
+            for (Station station : stations){
+                for (int i = 0; i < station.getCapacity(); i++){
+                    Vehicle vehicle = station.getAllVehicle().get(i);
+                    if (vehicle != null && vehicle.getIntervaleBeforeSteal() == 0){
+                        vehicle.stealed();
+                        thief.getVehiclesteal().add(vehicle);
+                        station.getAllVehicle().set(i, null);
+                    }
+                }
+            }
         }
     }
 }
