@@ -1,4 +1,4 @@
-package test.VLille.vehicle;
+package test.VLille.Station;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
