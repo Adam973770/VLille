@@ -2,6 +2,9 @@ package src.VLille.user;
 import src.VLille.vehicle.Bike.*;
 import src.VLille.vehicle.*;
 
+/**
+ * Class representing a Renter who has the unique possibility of renting a vehicle
+ */
 public class Renter extends User{
 
     /**
@@ -103,7 +106,7 @@ public class Renter extends User{
         /**
          * Sets the bike owned by the Renter.
          * 
-         * @param bike The `Bike` object owned by the Renter.
+         * @param vehicle The `Bike` object owned by the Renter.
          * @return The current `RenterBuilder` instance.
          */
         public RenterBuilder setOwnedVehicle(Vehicle vehicle){

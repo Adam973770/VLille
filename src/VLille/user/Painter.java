@@ -2,6 +2,9 @@ package src.VLille.user;
 import src.VLille.vehicle.Bike.*;
 import src.VLille.vehicle.*;
 
+/**
+ * Class representing a Painter who has the possibility to change the color of Vehicle
+ */
 public class Painter extends User{
 
     /**
@@ -103,7 +106,7 @@ public class Painter extends User{
         /**
          * Sets the bike owned by the Painter.
          * 
-         * @param bike The `Bike` object owned by the Painter.
+         * @param vehicle The `Bike` object owned by the Painter.
          * @return The current `PainterBuilder` instance.
          */
         public PainterBuilder setOwnedVehicle(Vehicle vehicle){

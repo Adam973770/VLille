@@ -3,6 +3,9 @@ import src.VLille.vehicle.Bike.*;
 import src.VLille.vehicle.*;
 import java.util.*;
 
+/**
+ * Class representing of Thief, that can steal a vehicle
+ */
 public class Thief extends User{
     /**List of all the vehicle the thief have steal */
     private List<Vehicle> vehiclesteal;
@@ -125,7 +128,7 @@ public class Thief extends User{
         /**
          * Sets the bike owned by the Thief.
          * 
-         * @param bike The `Bike` object owned by the Thief.
+         * @param vehicle The `Bike` object owned by the Thief.
          * @return The current `ThiefBuilder` instance.
          */
         public ThiefBuilder setOwnedVehicle(Vehicle vehicle){

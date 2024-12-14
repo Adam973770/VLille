@@ -2,6 +2,9 @@ package src.VLille.user;
 import src.VLille.vehicle.Bike.*;
 import src.VLille.vehicle.*;
 
+/**
+ * Class representing a Repairer who have the possibilty to repair a vehicle when he's broken
+ */
 public class Repairer extends User{
 
     /**
@@ -103,7 +106,7 @@ public class Repairer extends User{
         /**
          * Sets the bike owned by the repairer.
          * 
-         * @param bike The `Bike` object owned by the repairer.
+         * @param vehicle The `Bike` object owned by the repairer.
          * @return The current `RepairerBuilder` instance.
          */
         public RepairerBuilder setOwnedVehicle(Vehicle vehicle){
