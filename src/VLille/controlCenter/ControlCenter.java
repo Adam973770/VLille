@@ -24,6 +24,8 @@ public class ControlCenter implements StationObserver{
 
     /**
      * Returns the single instance of the ControlCenter class and creating it if it does not already exist
+     * 
+     * @return the unique instance of the ControlCenter class
      */
     public static ControlCenter getInstance(){
         if (uniqueInstance == null) {

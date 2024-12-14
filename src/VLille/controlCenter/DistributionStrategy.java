@@ -15,9 +15,11 @@ import src.VLille.Exceptions.*;
  */
 public interface DistributionStrategy {
     /**
-     * Distribute all the vehicle in the system from all the station
+     * Distribute all the vehicle in the system from all the station in each station
      * 
      * @param stations the list of all the station in the system
+     * @throws StationIsAlreadyEmpty if a station is already empty and no vehicles can be taked from it
+     * @throws StationIsFullException if a station is full and cannot dropped more vehicles
      */
     public void distribution(List<Station> stations) throws StationIsAlreadyEmpty, StationIsFullException;
 } 
