@@ -14,3 +14,10 @@ run:
 
 test: classes
 	java -jar junit-platform-console-standalone-1.9.3.jar --class-path class --scan-class-path
+
+docs:
+	rm -rf docs
+	mkdir -p docs
+	javadoc -d docs src/VLille/controlCenter/*.java src/VLille/Exceptions/*.java src/VLille/Station/*.java src/VLille/user/*.java src/VLille/vehicle/*.java src/VLille/vehicle/Bike/*.java src/VLille/vehicle/Bike/equipment/*.java
+
+.PHONY: docs
