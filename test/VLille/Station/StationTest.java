@@ -16,6 +16,7 @@ public class StationTest {
     private Vehicle bike1;
     private Vehicle bike2;
     private Vehicle bike3;
+    private MockStationObserver observer;
 
     @BeforeEach
     public void init() throws StationIsFullException{
@@ -24,9 +25,10 @@ public class StationTest {
         this.bike1 = new ClassicBike();
         this.bike2 = new ElectricBike();
         this.bike3 = new ClassicBike();
-
         this.station.dropVehicle(this.bike1);
         this.station.dropVehicle(this.bike2);
+        this.observer = new MockStationObserver();
+        this.station.addStationObserver(this.observer);
     }
 
     @Test 
@@ -54,5 +56,38 @@ public class StationTest {
         this.station.setCapacity(2);
         assertEquals(this.station.getCapacity(), this.station.getAllVehicle().size(), 2);
         assertThrows(StationIsFullException.class, () -> this.station.dropVehicle(this.bike3));       
+    }
+
+    @Test 
+    public void checkIfUpdateHasBeenCorrectlyImplementedWithTheMock() throws StationIsFullException, StationIsAlreadyEmpty{
+        this.station.dropVehicle(this.bike3);
+        assertEquals(this.observer.getCount(), 1);
+        this.station.takeVehicle();
+        assertEquals(this.observer.getCount(), 2);
+    }
+
+    public class MockStationObserver implements StationObserver{
+        private int count;
+
+        public MockStationObserver(){
+            this.count = 0;
+        }
+
+        public int getCount(){
+            return this.count;
+        }
+
+        @Override
+        public void update(Station station, String event, Vehicle vehicle){
+            this.count++;
+            switch (event) {
+            case "Vehicle has been take":
+                System.out.println("ControlCenter : A vehicle has been taked in " + station.getId());
+                break;
+            case  "Vehicle has been drop":
+                System.out.println("ControlCenter : A vehicle has been droped in " + station.getId());
+                break;
+            }
+        }
     }
 }
