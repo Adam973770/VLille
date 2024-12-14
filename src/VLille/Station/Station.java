@@ -9,12 +9,17 @@ import src.VLille.controlCenter.*;
  * class for Station
  */
 public class Station {
-
+    /** List of all the Vehcile Object in the Station */
     protected ArrayList<Vehicle> allVehicle;
+    /** The capicity/slot number of the station */
     protected int capacity;
+    /** The control center which managed this station */
     protected ControlCenter controlCenter;
+    /** The id of the station */
     protected String id;
+    /** A Random Object needed to create a random Id */
     protected Random random;
+    /** List of all the Observer needed for the Observer pattern, these observer gonna receive some "notification" from the station */
     protected List<StationObserver> observers;
 
     /**
