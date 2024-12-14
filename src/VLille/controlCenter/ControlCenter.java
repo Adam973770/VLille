@@ -9,8 +9,9 @@ import src.VLille.user.*;
 public class ControlCenter implements StationObserver{
     /** The unique instance of ControlCenter */
     private static ControlCenter uniqueInstance;
-
+    /** The list of all the station being managed by the ControlCenter */
     private ArrayList<Station> allStation;
+    /** Strategy use to distributed all the Vehicle in each station */
     private DistributionStrategy strategy; 
 
     /**
@@ -21,6 +22,9 @@ public class ControlCenter implements StationObserver{
         this.strategy = new DistributionStrategylmpl();
     }
 
+    /**
+     * Returns the single instance of the ControlCenter class and creating it if it does not already exist
+     */
     public static ControlCenter getInstance(){
         if (uniqueInstance == null) {
             uniqueInstance = new ControlCenter();
@@ -69,10 +73,10 @@ public class ControlCenter implements StationObserver{
     }
 
     /**
-     * This method is use to know which event has been create
+     * Called when an event occurs at a station
      * 
-     * @param station the station from all the event react
-     * @param event the event created
+     * @param station the station from where all the event occurs
+     * @param event description of the event
      * @param vehicle the vehicle take or drop from the station
      */
     @Override
