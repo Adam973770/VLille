@@ -11,59 +11,75 @@ import src.VLille.Exceptions.*;
 
 public class Main {
     public static void main(String [] args) throws StationIsAlreadyEmpty, StationIsFullException{
-        /** 
-        //user
-        Painter painter = new Painter.PainterBuilder().setFirstName("Jeanne").setGender("Femme").build();
+        //création du centre de controle
+        ControlCenter controlCenter = ControlCenter.getInstance();
+        //création de 4 stations
+        System.out.println("Ajout de 4 station qui vont être gestionner par le centre de controle");
+        Station station1 = new Station(controlCenter);
+        Station station2 = new Station(controlCenter);
+        Station station3 = new Station(controlCenter);
+        Station station4 = new Station(controlCenter);
+        //ajout des station au centre de controle
+        controlCenter.addStation(station1);
+        controlCenter.addStation(station2);
+        controlCenter.addStation(station3);
+        controlCenter.addStation(station4);
+        //création de quelque user
         Renter renter = new Renter.RenterBuilder().setFirstName("Theo").setGender("Homme").build();
+        Painter painter = new Painter.PainterBuilder().setFirstName("Jeanne").setGender("Femme").build();
         Repairer repairer = new Repairer.RepairerBuilder().setFirstName("Theophane").setGender("Homme").build();
         Thief thief = new Thief.ThiefBuilder().setFirstName("Leo").setGender("Homme").build();
-
-        //vehicle
-        Bike b1 = new ClassicBike();
-        b1 = new Basket(b1);
-        b1 = new Bottle(b1);
-
-        //Factory
+        //création de l'interface action
+        ActionUser action = new ActionUserlmpl();
+        //création des FactoryBike
         ElectricBikeFactory electricBikeFactory = new ElectricBikeFactory();
-        Bike bike1 = electricBikeFactory.createBike();
         ClassicBikeFactory classicBikeFactory = new ClassicBikeFactory();
-        Bike bike2 = classicFactory.createBike();
+        //ajout des bike dans les stations
+        try {
+            //station1 
+            //ajout de 5 electricBike
+            System.out.println("Ajout de quelques vélos a la premiere station");
+            for (int i = 0; i<5; i++){
+                station1.dropVehicle(electricBikeFactory.createBike());
+            }
+            //ajout de 4 classicBike
+            for (int i = 0; i<4; i++){
+                station1.dropVehicle(classicBikeFactory.createBike());
+            }
+            //station2
+            //ajout de 5 electricBike
+            System.out.println("Ajout de quelques vélos a la deuxieme station");
+            for (int i = 0; i<5; i++){
+                station2.dropVehicle(electricBikeFactory.createBike());
+            }
+            //ajout de 4 classicBike
+            for (int i = 0; i<4; i++){
+                station2.dropVehicle(classicBikeFactory.createBike());
+            }
+            //station3
+            //ajout de 5 electricBike
+            System.out.println("Ajout de quelques vélos a la troisieme station");
+            for (int i = 0; i<5; i++){
+                station3.dropVehicle(electricBikeFactory.createBike());
+            }
+            //ajout de 4 classicBike
+            for (int i = 0; i<4; i++){
+                station3.dropVehicle(classicBikeFactory.createBike());
+            }
+            //station4
+            //ajout de 5 electricBike
+            System.out.println("Ajout de quelques vélos a la quatriéme station");
+            for (int i = 0; i<5; i++){
+                station4.dropVehicle(electricBikeFactory.createBike());
+            }
+            //ajout de 4 classicBike
+            for (int i = 0; i<4; i++){
+                station4.dropVehicle(classicBikeFactory.createBike());
+            }
+        }catch (Exception e){
+            System.out.println(e);
+        }
 
-        Bike b2 = new ElectricBike();
-        b2 = new Basket(b2);
-        b2 = new LuggageRack(b2);
-        System.out.println(b2.toString());
-        b2.rented();
-        System.out.println(b2.toString());
-        //station
-        ControlCenter controlCenter = ControlCenter.getInstance();
-        Station bikeStation = new Station(controlCenter);
-        controlCenter.getAllBikeStation().add(bikeStation);
-        System.out.println(controlCenter.getAllBikeStation());
-        bikeStation.dropVehicle(b1);
-
-        //action User
-        ActionUser actionUser = new ActionUserlmpl();
-        b1.setIntervaleBeforeSteal(0);
-        actionUser.steal(thief, controlCenter.getAllBikeStation());
-        System.out.println(b1.getState());
-        System.out.println(bikeStation.getAllVehicle());
-        System.out.println(thief.getVehiclesteal());
-        bikeStation.setCapacity(10);
-        System.out.println(bikeStation.getAllVehicle());
-        */
-        ElectricBikeFactory electricBikeFactory = new ElectricBikeFactory();
-        Bike bike1 = electricBikeFactory.createBike();
-        ClassicBikeFactory classicBikeFactory = new ClassicBikeFactory();
-        Bike bike2 = classicBikeFactory.createBike();
-        Painter painter = new Painter.PainterBuilder().setFirstName("Jeanne").setGender("Femme").build();
-        Renter renter = new Renter.RenterBuilder().setFirstName("Theo").setGender("Homme").build();
-        Repairer repairer = new Repairer.RepairerBuilder().setFirstName("Theophane").setGender("Homme").build();
-        Thief thief = new Thief.ThiefBuilder().setFirstName("Leo").setGender("Homme").build();
-        ControlCenter controlCenter = ControlCenter.getInstance();
-        Station bikeStation = new Station(controlCenter);
-        controlCenter.addStation(bikeStation);
-        bikeStation.dropVehicle(bike1);
-
+        //debut du loop
     }
 }
