@@ -101,6 +101,7 @@ public class ActionUserTest {
         assertEquals(this.bike1.getState(), "Stealed");
     }
 
+    // utilisation d'un mock pour savoir si les methodes drop et take sont bien appellé
     public class MockStation extends Station{
         private int count;
 
@@ -125,7 +126,8 @@ public class ActionUserTest {
             return super.takeVehicle();
         }
     }
-
+    
+    // utilisation d'un mock pour eviter le random dans la methode steal
     public class MockActionUser extends ActionUserlmpl{
         public MockActionUser(){
             super();
