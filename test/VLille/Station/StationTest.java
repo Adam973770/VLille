@@ -66,6 +66,7 @@ public class StationTest {
         assertEquals(this.observer.getCount(), 2);
     }
 
+    //utilisation du mock pour savoir si update est bien appellé
     public class MockStationObserver implements StationObserver{
         private int count;
 
