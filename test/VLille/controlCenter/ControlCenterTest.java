@@ -22,13 +22,14 @@ public class ControlCenterTest {
     @BeforeEach
     public void init(){
         this.controlCenter = ControlCenter.getInstance();
+        this.controlCenter.getAllBikeStation().clear();
         this.station1 = new Station(this.controlCenter);
         this.station2 = new Station(this.controlCenter);
         this.controlCenter.addStation(this.station1);
         this.controlCenter.addStation(this.station2);
         this.bike1 = new ClassicBike();
         this.bike2 = new ElectricBike();
-        this.bike3 = new ClassicBike();        
+        this.bike3 = new ClassicBike();    
     } 
 
     @Test 
@@ -60,5 +61,19 @@ public class ControlCenterTest {
         Station station = new Station(this.controlCenter);
         this.controlCenter.addStation(station);
         assertTrue(this.controlCenter.getAllBikeStation().contains(station));
+    }
+
+    @Test
+    public void checkIfTheStrategyWork() throws StationIsAlreadyEmpty, StationIsFullException {
+        this.station1.dropVehicle(this.bike1);
+        this.station2.dropVehicle(this.bike2);
+        this.station2.dropVehicle(this.bike3);
+        assertTrue(this.station1.getAllVehicle().contains(this.bike1));
+        assertTrue(this.station2.getAllVehicle().contains(this.bike2));
+        assertTrue(this.station2.getAllVehicle().contains(this.bike3));
+        this.controlCenter.getStrategy().distribution(this.controlCenter.getAllBikeStation());
+        assertTrue(this.station1.getAllVehicle().contains(this.bike1));
+        assertTrue(this.station2.getAllVehicle().contains(this.bike2));
+        assertTrue(this.station1.getAllVehicle().contains(this.bike3));
     }
 }
