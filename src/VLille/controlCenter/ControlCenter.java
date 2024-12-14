@@ -35,6 +35,15 @@ public class ControlCenter implements StationObserver{
     }
 
     /**
+     * return the distribution strategy of the control center
+     * 
+     * @return The actual DistributionStrategy
+     */
+    public DistributionStrategy getStrategy(){
+        return this.strategy;
+    }
+
+    /**
      * Changes the distribution strategy
      * 
      * @param strat the new DistributionStrategy
