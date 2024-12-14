@@ -96,6 +96,8 @@ public class Station {
 
     /**
      * Set the capacity of the station
+     * 
+     * @param c The new capacity of the station
      */
     public void setCapacity(int c) {
         this.capacity = c;
