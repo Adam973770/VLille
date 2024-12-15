@@ -90,7 +90,7 @@ public class Main {
         }catch (Exception e){
             System.out.println(e);
         }
-        System.out.println("Début de la mise en place du systéme");
+        System.out.println("Début de la prise en charge des stations par le centre de contrôle");
         //debut du loop
         for (int i = 0; i< 10; i++){
             //le repareur repare
@@ -104,8 +104,25 @@ public class Main {
             }
 
             // les renter drop
+            for (User renter : renters) {
+                if (renter.getOwnedVehicle() != null && random.nextInt(2) == 1){
+                    boolean dropped = false;
+                    for (Station station : controlCenter.getAllBikeStation()){
+                        try {
+                            action.drop(renter, station);
+                        }catch(StationIsFullException e){
+                            System.out.println("Pas de place dans " + station.getId());
+                            dropped = true;
+                        }
+                    }
+                    if (!dropped){
+                        System.out.println(renter.getFirstName() + " n'a pas trouvé de station pour déposer son velo");
+                    }
+                }
+            }
 
             //les renter louent
+            
 
             //Le voleur peut voler
             action.steal(thief, controlCenter.getAllBikeStation());
