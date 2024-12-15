@@ -38,7 +38,7 @@ public class ActionUserlmpl implements ActionUser{
             user.ownedVehicle.setIntervaleBeforeSteal(2);
         }
         catch (Exception e) {
-            System.out.println("No vehicle available in this station");
+            System.out.println("No vehicle available in : " + station.getId());
         }
     }
 
@@ -58,7 +58,7 @@ public class ActionUserlmpl implements ActionUser{
             user.ownedVehicle = null;
         }
         catch (Exception e) {
-            System.out.println("No place to drop this vehicle");
+            System.out.println("No place to drop this vehicle in : " + station.getId());
         }
     }
 
