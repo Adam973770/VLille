@@ -123,21 +123,25 @@ public class Main {
                 }
             }
 
-            //les renter louent
+            // Les renter louent
             for (User renter : renters) {
-                if (renter.getOwnedVehicle() ==  null){
+                if (renter.getOwnedVehicle() == null) {
                     boolean taked = false;
-                    for (Station station : controlCenter.getAllBikeStation()){
+                    // Mélanger la liste des stations pour choisir une station aléatoirement
+                    List<Station> shuffledStations = new ArrayList<>(controlCenter.getAllBikeStation());
+                    Collections.shuffle(shuffledStations);
+                    
+                    for (Station station : shuffledStations) {
                         try {
                             action.rent(renter, station);
                             taked = true;
                             //break;
-                        }catch(StationIsAlreadyEmpty e){
+                        } catch (StationIsAlreadyEmpty e) {
                             System.out.println("Pas de vehicule disponible dans " + station.getId());
                         }
                     }
                     if (!taked) {
-                        System.out.println(renter.getFirstName() + " n'a pas trouvé de velo a louer");
+                        System.out.println(renter.getFirstName() + " n'a pas trouvé de velo à louer");
                     }
                 }
             }
@@ -154,6 +158,8 @@ public class Main {
             //Le voleur peut voler
             action.steal(thief, controlCenter.getAllBikeStation());
             System.out.println("\u001B[31mLe voleur a volé " + thief.getVehiclesteal().size() + " Véhicules depuis la prise en charge du centre de contrôle\u001B[0m");
+
+            //check les slots restant dans chaque station
         }
         System.out.println("\u001B[32mFin de la prise en charge des stations par le centre de contrôle\u001B[0m");
     }
