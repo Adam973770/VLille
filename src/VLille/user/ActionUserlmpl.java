@@ -96,11 +96,11 @@ public class ActionUserlmpl implements ActionUser{
         for (Station station : stations){
             for (int i = 0; i < station.getCapacity(); i++){
                 Vehicle vehicle = station.getAllVehicle().get(i);
-                if (vehicle != null && vehicle.getIntervaleBeforeSteal() == 0 && vehicle.getRandom().nextInt(10) <= 5){
+                if (vehicle != null && vehicle.getIntervaleBeforeSteal() <= 0 && vehicle.getRandom().nextInt(20) == 14){
                     vehicle.stealed();
                     thief.getVehiclesteal().add(vehicle);
                     station.getAllVehicle().set(i, null);
-                    System.out.println("Le voleur a volé le vehicule : " + vehicle.toString());
+                    System.out.println("Le voleur a volé le vehicule : " + vehicle.getVehicleId());
                 }
             }
         }
