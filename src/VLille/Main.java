@@ -90,29 +90,31 @@ public class Main {
         }catch (Exception e){
             System.out.println(e);
         }
-        System.out.println("Début de la prise en charge des stations par le centre de contrôle");
+        System.out.println("\u001B[32mDébut de la prise en charge des stations par le centre de contrôle\u001B[0m");
         //debut du loop
         for (int i = 0; i< 10; i++){
+            System.out.println("\u001B[33mDébut du " + (i + 1) + " loop\u001B[0m");
             //le repareur repare
             for (Station station : controlCenter.getAllBikeStation()){
                 for (Vehicle vehicle : station.getAllVehicle()){
                     if (vehicle!=null && vehicle.getNbUsage() == 0){
                         action.repair(repairer, vehicle);
-                        System.out.println(vehicle + " has been repaired");
+                        System.out.println(vehicle.getVehicleId() + " a été réparé");
                     }
                 }
             }
 
             // les renter drop
             for (User renter : renters) {
-                if (renter.getOwnedVehicle() != null && random.nextInt(2) == 1){
+                if (renter.getOwnedVehicle() != null && random.nextInt(5) == 1){
                     boolean dropped = false;
                     for (Station station : controlCenter.getAllBikeStation()){
                         try {
                             action.drop(renter, station);
+                            dropped = true;
+                            //break;
                         }catch(StationIsFullException e){
                             System.out.println("Pas de place dans " + station.getId());
-                            dropped = true;
                         }
                     }
                     if (!dropped){
@@ -122,11 +124,37 @@ public class Main {
             }
 
             //les renter louent
-            
+            for (User renter : renters) {
+                if (renter.getOwnedVehicle() ==  null){
+                    boolean taked = false;
+                    for (Station station : controlCenter.getAllBikeStation()){
+                        try {
+                            action.rent(renter, station);
+                            taked = true;
+                            //break;
+                        }catch(StationIsAlreadyEmpty e){
+                            System.out.println("Pas de vehicule disponible dans " + station.getId());
+                        }
+                    }
+                    if (!taked) {
+                        System.out.println(renter.getFirstName() + " n'a pas trouvé de velo a louer");
+                    }
+                }
+            }
+
+            //check le intervale before steal de chaque vehicle du systeme
+            for (Station station : controlCenter.getAllBikeStation()){
+                for (Vehicle vehicle : station.getAllVehicle()){
+                    if (vehicle != null){
+                        vehicle.setIntervaleBeforeSteal(vehicle.getIntervaleBeforeSteal() - 1);
+                    }
+                }
+            }
 
             //Le voleur peut voler
             action.steal(thief, controlCenter.getAllBikeStation());
-            System.out.println("Le voleur a volé " + thief.getVehiclesteal().size() + " Vehicule");
+            System.out.println("\u001B[31mLe voleur a volé " + thief.getVehiclesteal().size() + " Véhicules depuis la prise en charge du centre de contrôle\u001B[0m");
         }
+        System.out.println("\u001B[32mFin de la prise en charge des stations par le centre de contrôle\u001B[0m");
     }
 }
