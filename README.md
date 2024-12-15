@@ -28,7 +28,7 @@ Pour exécuter les tests, exécuté : ```make test```, vous devriez alors obteni
 Pour lancer le **Main**, exécuté : ```make run```
 
 ## Générer la documentation :
-Pour Générer la javadoc, exécuté : ```make docs```, la documentation seras alors générer dans un dossier docs
+Pour Générer la javadoc, exécuté : ```make docs```, la documentation seras alors générer dans un dossier **docs**
 
 ## Jar
 Pour créer un jar du main, exécuter la commande : ```make jar```, le jar seras alors créer dans le dossier jar sous le nom *VLille.jar*
