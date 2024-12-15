@@ -13,6 +13,8 @@ public class Main {
     public static void main(String [] args) throws StationIsAlreadyEmpty, StationIsFullException{
         //création du centre de controle
         ControlCenter controlCenter = ControlCenter.getInstance();
+        //création d'un random
+        Random random = new Random();
         //création de 4 stations
         System.out.println("Ajout de 4 station qui vont être gestionner par le centre de controle");
         Station station1 = new Station(controlCenter);
@@ -25,9 +27,18 @@ public class Main {
         controlCenter.addStation(station3);
         controlCenter.addStation(station4);
         //création de quelque user
-        Renter renter = new Renter.RenterBuilder().setFirstName("Theo").setGender("Homme").build();
+        //Liste de Renter
+        List<User> renters = new ArrayList<>();
+        renters.add(new Renter.RenterBuilder().setFirstName("Theo").setGender("Homme").build());
+        renters.add(new Renter.RenterBuilder().setFirstName("Paul").setGender("Homme").build());
+        renters.add(new Renter.RenterBuilder().setFirstName("Celia").setGender("Femme").build());
+        renters.add(new Renter.RenterBuilder().setFirstName("Jeane").setGender("Femme").build());
+        renters.add(new Renter.RenterBuilder().setFirstName("Jeab").setGender("Homme").build());
+        //un peintre
         Painter painter = new Painter.PainterBuilder().setFirstName("Jeanne").setGender("Femme").build();
+        // un repareur
         Repairer repairer = new Repairer.RepairerBuilder().setFirstName("Theophane").setGender("Homme").build();
+        // un voleur
         Thief thief = new Thief.ThiefBuilder().setFirstName("Leo").setGender("Homme").build();
         //création de l'interface action
         ActionUser action = new ActionUserlmpl();
@@ -79,7 +90,26 @@ public class Main {
         }catch (Exception e){
             System.out.println(e);
         }
-
+        System.out.println("Début de la mise en place du systéme");
         //debut du loop
+        for (int i = 0; i< 10; i++){
+            //le repareur repare
+            for (Station station : controlCenter.getAllBikeStation()){
+                for (Vehicle vehicle : station.getAllVehicle()){
+                    if (vehicle!=null && vehicle.getNbUsage() == 0){
+                        action.repair(repairer, vehicle);
+                        System.out.println(vehicle + " has been repaired");
+                    }
+                }
+            }
+
+            // les renter drop
+
+            //les renter louent
+
+            //Le voleur peut voler
+            action.steal(thief, controlCenter.getAllBikeStation());
+            System.out.println("Le voleur a volé " + thief.getVehiclesteal().size() + " Vehicule");
+        }
     }
 }
