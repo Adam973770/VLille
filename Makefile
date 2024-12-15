@@ -20,4 +20,8 @@ docs:
 	mkdir -p docs
 	javadoc -d docs src/VLille/controlCenter/*.java src/VLille/Exceptions/*.java src/VLille/Station/*.java src/VLille/user/*.java src/VLille/vehicle/*.java src/VLille/vehicle/Bike/*.java src/VLille/vehicle/Bike/equipment/*.java
 
+jar: classes
+	mkdir -p jar
+	jar cfe jar/VLille.jar src.VLille.Main -C class .
+
 .PHONY: docs
