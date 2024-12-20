@@ -17,7 +17,7 @@
 
 # How to (depuis la source du projet) :
 ## Compilation des fichiers source et test :
-Pour compiler tout les fichier, exécuté : ```make all```, les fichiers compilés se trouvent dans le dossier **class**
+Pour compiler tout les fichiers y compris les tests, exécuté : ```make all```, les fichiers compilés se trouvent dans le dossier **class**
 
 ## Executer les test :
 Pour exécuter les tests, exécuté : ```make test```, vous devriez alors obtenir quelque chose comme ça :
@@ -25,7 +25,7 @@ Pour exécuter les tests, exécuté : ```make test```, vous devriez alors obteni
 ![test](test/test.png)
 
 ## Executer le Main :
-Pour lancer le **Main**, exécuté : ```make run```
+Pour lancer le **Main**, exécuté : ```make run```, le main est alors une simulation de comment pourrais se derouler le systeme VLille, si vous lancez le main plusieurs fois, vous remarquerez la sumilation n'est jamais la même
 
 ## Générer la documentation :
 Pour Générer la javadoc, exécuté : ```make docs```, la documentation seras alors générer dans un dossier **docs**
