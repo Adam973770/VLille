@@ -16,6 +16,9 @@
 5. Le fichier **Makefile** est un makefile utile pour exécuter les commandes de la rubrique *How to*
 
 # How to (depuis la source du projet) :
+## Cloner le depot :
+exécuter ```git clone git@gitlab-etu.fil.univ-lille.fr:adam.ramjattan.etu/projet-coo-s5-ramjattan.git```
+
 ## Compilation des fichiers source et test :
 Pour compiler tout les fichiers y compris les tests, exécuté : ```make all```, les fichiers compilés se trouvent dans le dossier **class**
 
