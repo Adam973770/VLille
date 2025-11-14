@@ -3,9 +3,7 @@
 ## Membre du Projet 
 
 - Adam RAMJATTAN
-    - Numéro étudiant : 42140181
     - L3 INFO
-    - Groupe 6
 
 ## Architecture du depôt 
 
